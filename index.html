@@ -1,101 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Lovely Planners Studio</title>
+<meta name="description" content="Lovely Planners Studio - Premium planners, journals, and productivity tools. Buy directly on Amazon." />
 <style>
-  body { margin:0; font-family: 'Arial', sans-serif; background:#f7f7f7; color:#333; }
-  header { background:#4CAF50; color:white; padding:25px 0; text-align:center; }
-  header h1 { margin:0; font-size:2.5em; }
-  nav { background:#333; }
-  nav ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap; }
-  nav ul li { margin:0; }
-  nav ul li a { display:block; padding:15px 20px; color:white; text-decoration:none; }
-  nav ul li a:hover { background:#575757; }
-  .container { max-width:1200px; margin:20px auto; padding:0 20px; }
-  h2 { text-align:center; margin-bottom:20px; color:#333; }
-  .books, .articles { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-  .book, .article { background:white; padding:15px; border-radius:10px; width:220px; box-shadow:0 3px 6px rgba(0,0,0,0.15); text-align:center; transition: transform 0.2s; }
-  .book:hover, .article:hover { transform:scale(1.03); }
-  .book img, .article img { width:100%; height:auto; border-radius:5px; }
-  .book a, .article a { text-decoration:none; color:#4CAF50; font-weight:bold; display:block; margin-top:10px; }
-  .ad { width:100%; text-align:center; margin:25px 0; padding:15px; background:#eee; border-radius:10px; }
-  footer { background:#333; color:white; padding:25px 0; text-align:center; margin-top:40px; }
-  footer a { color:white; text-decoration:none; margin:0 10px; }
-  footer a:hover { text-decoration:underline; }
-  @media(max-width:600px){ .book,.article{width:100%;} nav ul{flex-direction:column;} }
+  :root{
+    --accent:#0b6efd;
+    --muted:#6b7280;
+    --bg:#f7fafc;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box}
+  body{font-family:Inter, 'Segoe UI', Roboto, Arial, sans-serif;margin:0;background:var(--bg);color:#111}
+  header{background:linear-gradient(90deg,var(--accent),#0066cc);color:#fff;padding:22px 16px;text-align:center;position:sticky;top:0;z-index:40}
+  header h1{margin:0;font-size:22px;letter-spacing:0.4px}
+  nav{margin-top:10px}
+  nav a{color:rgba(255,255,255,0.95);margin:0 8px;font-weight:600;font-size:14px}
+  .container{max-width:1100px;margin:28px auto;padding:0 16px}
+  .hero{background:var(--card);padding:36px;border-radius:12px;box-shadow:0 6px 30px rgba(11,88,190,0.08);text-align:center}
+  .hero h2{margin:0;font-size:28px;color:var(--accent)}
+  .hero p{color:var(--muted);margin-top:10px}
+  .books-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin-top:22px}
+  .book-card{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.06);text-align:center}
+  .book-card img{width:100%;height:260px;object-fit:cover;border-radius:6px}
+  .book-card h3{margin:10px 0 6px;font-size:16px}
+  .book-card p{font-size:13px;color:var(--muted);min-height:44px}
+  .buy-btn{display:inline-block;margin-top:10px;padding:8px 12px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+  section{margin-top:30px}
+  h2.section-title{font-size:20px;margin-bottom:12px;color:#111}
+  .layout{display:grid;grid-template-columns:2fr 1fr;gap:18px;align-items:start}
+  @media(max-width:900px){.layout{grid-template-columns:1fr}}
+  /* Articles accordion */
+  .accordion{background:var(--card);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+  .acc-item{border-bottom:1px solid #eee;padding:10px 0}
+  .acc-title{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:8px 6px}
+  .acc-title h3{margin:0;font-size:16px}
+  .acc-content{max-height:0;overflow:hidden;transition:max-height .28s ease;padding:0 6px}
+  .acc-content.open{padding-top:12px;max-height:1000px}
+  .acc-content p{color:var(--muted);line-height:1.6}
+  /* Sidebar */
+  .sidebar{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+  .meta{font-size:14px;color:var(--muted);margin-bottom:12px}
+  /* footer */
+  footer{margin-top:30px;padding:20px;text-align:center;color:var(--muted)}
+  .small{font-size:13px;color:var(--muted)}
+  /* contact form visual */
+  .form-row{display:flex;gap:8px}
+  .form-row input,.form-row textarea{width:100%;padding:10px;border:1px solid #e6e9ee;border-radius:8px}
+  .btn-primary{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;border:none;cursor:pointer}
+  .ad-placeholder{background:linear-gradient(90deg,#f0f7ff,#fff);border:1px dashed #cfe3ff;color:#0b66d1;padding:14px;text-align:center;border-radius:8px;margin:12px 0}
 </style>
 </head>
 <body>
 
 <header>
   <h1>Lovely Planners Studio</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#books">Books</a>
+    <a href="#articles">Articles</a>
+    <a href="#contact">Contact</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#terms">Terms</a>
+    <a href="#disclaimer">Disclaimer</a>
+  </nav>
 </header>
 
-<nav>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About Us</a></li>
-    <li><a href="#contact">Contact Us</a></li>
-    <li><a href="#privacy">Privacy</a></li>
-    <li><a href="#terms">Terms</a></li>
-    <li><a href="#disclaimer">Disclaimer</a></li>
-  </ul>
-</nav>
+<main class="container">
+  <section id="home" class="hero" aria-label="home">
+    <h2>Premium planners, journals & productivity tools</h2>
+    <p>Beautifully designed planners to organize your days, boost focus, and help you chase big goals — buy directly on Amazon.</p>
+  </section>
 
-<div class="container" id="home">
-  <h2>Our Books</h2>
-  <div class="books">
-    <div class="book"><img src="https://m.media-amazon.com/images/I/41GryDZx6pL._SY445_SX342_ML2_.jpg" alt="Book 1"><a href="https://www.amazon.com/dp/B0FZF7Q9MT" target="_blank">Book 1</a></div>
-    <div class="book"><img src="https://m.media-amazon.com/images/I/61tVNSDlxdL._SY522_.jpg" alt="Book 2"><a href="https://www.amazon.com/dp/B0FZFBCW22" target="_blank">Book 2</a></div>
-    <div class="book"><img src="https://m.media-amazon.com/images/I/515miG+dxVL._SL1499_.jpg" alt="Book 3"><a href="https://www.amazon.com/dp/B0FZJK5X7B" target="_blank">Book 3</a></div>
-    <div class="book"><img src="https://m.media-amazon.com/images/I/51xjZsVXwpL._SY445_SX342_ControlCacheEqualizer_.jpg" alt="Book 4"><a href="https://www.amazon.com/dp/B0FZFM48PC" target="_blank">Book 4</a></div>
-    <div class="book"><img src="https://m.media-amazon.com/images/I/41Qtuy1EAvL._SY445_SX342_ControlCacheEqualizer_.jpg" alt="Book 5"><a href="https://www.amazon.com/dp/B0FZX5Q1Y7" target="_blank">Book 5</a></div>
-    <div class="book"><img src="https://m.media-amazon.com/images/I/512YIqQHrIL._SY522_.jpg" alt="Book 6"><a href="https://www.amazon.com/dp/B0FZKD36MW" target="_blank">Book 6</a></div>
-  </div>
+  <section id="books">
+    <h2 class="section-title">Our Books</h2>
 
-  <div class="ad"><p>AdSense Ad Here (Books Section)</p></div>
+    <!-- ADS Placeholder (Books) -->
+    <div class="ad-placeholder">AdSense spot (books) — paste your AdSense code here when ready</div>
 
-  <div class="books">
-    <div class="book"><img src="https://m.media-amazon.com/images/I/71olRvxqfPL._SL1499_.jpg" alt="Book 7"><a href="https://www.amazon.com/dp/B0FZKMGHBS" target="_blank">Book 7</a></div>
-    <div class="book"><img src="https://m.media-amazon.com/images/I/41-T2xmL4ML._SY445_SX342_ControlCacheEqualizer_.jpg" alt="Book 8"><a href="https://www.amazon.com/dp/B0FZS1KCT1" target="_blank">Book 8</a></div>
-    <div class="book"><img src="https://m.media-amazon.com/images/I/61FKc3VHYjL._SL1499_.jpg" alt="Book 9"><a href="https://www.amazon.com/dp/B0FZVH437L" target="_blank">Book 9</a></div>
-    <div class="book"><img src="https://m.media-amazon.com/images/I/61zZtZDdhzL._SL1499_.jpg" alt="Book 10"><a href="https://www.amazon.com/dp/B0FZTDD1H5" target="_blank">Book 10</a></div>
-    <div class="book"><img src="https://m.media-amazon.com/images/I/616yWNlaqYL._SL1499_.jpg" alt="Book 11"><a href="https://www.amazon.com/dp/B0G13462JZ" target="_blank">Book 11</a></div>
-    <div class="book"><img src="https://m.media-amazon.com/images/I/51H-SCLLcPL._SL1499_.jpg" alt="Book 12"><a href="https://www.amazon.com/dp/B0G12RJR3G" target="_blank">Book 12</a></div>
-    <div class="book"><img src="https://m.media-amazon.com/images/I/61uTcT5KkoL._SL1499_.jpg" alt="Book 13"><a href="https://www.amazon.com/dp/B0G1BBQ2ZJ" target="_blank">Book 13</a></div>
-  </div>
-</div>
+    <div class="books-grid">
+      <!-- Book 1 -->
+      <div class="book-card">
+        <img src="https://m.media-amazon.com/images/I/41GryDZx6pL._SY445_SX342_ML2_.jpg" alt="My Unicorn Fairy World">
+        <h3>My Unicorn Fairy World</h3>
+        <p>A magical pink notebook for girls, kids, and teens who adore unicorns, rainbows, and fantasy worlds.</p>
+        <a class="buy-btn" href="https://www.amazon.com/dp/B0FZF7Q9MT" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
 
-<div class="container" id="articles">
-  <h2>Motivational Articles</h2>
-  <div class="ad"><p>AdSense Ad Here (Articles Section)</p></div>
-  <div class="articles">
-    <div class="article"><img src="https://via.placeholder.com/220x150?text=Article+1" alt="Article 1"><a href="#">The Power of Persistence</a></div>
-    <div class="article"><img src="https://via.placeholder.com/220x150?text=Article+2" alt="Article 2"><a href="#">Overcoming Challenges</a></div>
-    <div class="article"><img src="https://via.placeholder.com/220x150?text=Article+3" alt="Article 3"><a href="#">Building Self-Confidence</a></div>
-    <div class="article"><img src="https://via.placeholder.com/220x150?text=Article+4" alt="Article 4"><a href="#">The Art of Focus</a></div>
-    <div class="article"><img src="https://via.placeholder.com/220x150?text=Article+5" alt="Article 5"><a href="#">Time Management Secrets</a></div>
-    <div class="article"><img src="https://via.placeholder.com/220x150?text=Article+6" alt="Article 6"><a href="#">Achieving Your Goals</a></div>
-    <div class="article"><img src="https://via.placeholder.com/220x150?text=Article+7" alt="Article 7"><a href="#">Positive Thinking Everyday</a></div>
-    <div class="article"><img src="https://via.placeholder.com/220x150?text=Article+8" alt="Article 8"><a href="#">Embracing Change</a></div>
-    <div class="article"><img src="https://via.placeholder.com/220x150?text=Article+9" alt="Article 9"><a href="#">Learning from Failure</a></div>
-    <div class="article"><img src="https://via.placeholder.com/220x150?text=Article+10" alt="Article 10"><a href="#">The Importance of Discipline</a></div>
-    <div class="article"><img src="https://via.placeholder.com/220x150?text=Article+11" alt="Article 11"><a href="#">Finding Inner Peace</a></div>
-    <div class="article"><img src="https://via.placeholder.com/220x150?text=Article+12" alt="Article 12"><a href="#">Gratitude as a Habit</a></div>
-    <div class="article"><img src="https://via.placeholder.com/220x150?text=Article+13" alt="Article 13"><a href="#">The Power of Kindness</a></div>
-    <div class="article"><img src="https://via.placeholder.com/220x150?text=Article+14" alt="Article 14"><a href="#">Mindset for Success</a></div>
-    <div class="article"><img src="https://via.placeholder.com/220x150?text=Article+15" alt="Article 15"><a href="#">Stay Motivated Daily</a></div>
-  </div>
-</div>
+      <!-- Book 2 -->
+      <div class="book-card">
+        <img src="https://m.media-amazon.com/images/I/61tVNSDlxdL._SY522_.jpg" alt="Stay Kind, Stay Magical">
+        <h3>Stay Kind, Stay Magical</h3>
+        <p>Organize your life with positivity, motivation, and style.</p>
+        <a class="buy-btn" href="https://www.amazon.com/dp/B0FZFBCW22" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
 
-<div class="ad"><p>AdSense Ad Here (Footer)</p></div>
+      <!-- Book 3 -->
+      <div class="book-card">
+        <img src="https://m.media-amazon.com/images/I/515miG+dxVL._SL1499_.jpg" alt="Stay Organized, Stay Motivated">
+        <h3>Stay Organized, Stay Motivated</h3>
+        <p>Futuristic gaming-inspired productivity planner, perfect for teen & adult gamers.</p>
+        <a class="buy-btn" href="https://www.amazon.com/dp/B0FZJK5X7B" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
 
-<footer>
-  <p>&copy; 2025 Lovely Planners Studio | <a href="#about">About Us</a> | <a href="#contact">Contact Us</a> | <a href="#privacy">Privacy</a> | <a href="#terms">Terms</a> | <a href="#disclaimer">Disclaimer</a></p>
-  <p>Contact Email: <a href="mailto:imata.space@gmail.com">imata.space@gmail.com</a></p>
-</footer>
+      <!-- Book 4 -->
+      <div class="book-card">
+        <img src="https://m.media-amazon.com/images/I/51xjZsVXwpL._SY445_SX342_ControlCacheEqualizer_.jpg" alt="Shine Bright 2026">
+        <h3>Shine Bright 2026</h3>
+        <p>A fun and inspiring daily organizer for girls and teens.</p>
+        <a class="buy-btn" href="https://www.amazon.com/dp/B0FZFM48PC" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+
+      <!-- Book 5 -->
+      <div class="book-card">
+        <img src="https://m.media-amazon.com/images/I/41Qtuy1EAvL._SY445_SX342_ControlCacheEqualizer_.jpg" alt="Level Up 2026">
+        <h3>Level Up 2026</h3>
+        <p>Daily To-Do Planner for Gamers: Stay Organized, Stay in the Game — 2026 Edition.</p>
+        <a class="buy-btn" href="https://www.amazon.com/dp/B0FZX5Q1Y7" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+
+      <!-- Book 6 -->
+      <div class="book-card">
+        <img src="https://m.media-amazon.com/images/I/512YIqQHrIL._SY522_.jpg" alt="Daily To-Do Planner 2026">
+        <h3>Daily To-Do Planner 2026</h3>
+        <p>Simple and elegant daily organizer for a productive year.</p>
+        <a class="buy-btn" href="https://www.amazon.com/dp/B0FZKD36MW" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+
+      <!-- Book 7 -->
+      <div class="book-card">
+        <img src="https://m.media-amazon.com/images/I/71olRvxqfPL._SL1499_.jpg" alt="Dream Planner 2026">
+        <h3>Dream Planner 2026</h3>
+        <p>Anime style daily organizer: Plan your days with style, focus, and manga magic.</p>
+        <a class="buy-btn" href="https://www.amazon.com/dp/B0FZKMGHBS" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+
+      <!-- Book 8 -->
+      <div class="book-card">
+        <img src="https://m.media-amazon.com/images/I/41-T2xmL4ML._SY445_SX342_ControlCacheEqualizer_.jpg" alt="Sweet Strawberry Journal">
+        <h3>Sweet Strawberry Journal</h3>
+        <p>Perfect gift for teen girls and strawberry lovers; daily thoughts, gratitude & goals.</p>
+        <a class="buy-btn" href="https://www.amazon.com/dp/B0FZS1KCT1" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+
+      <!-- Book 9 -->
+      <div class="book-card">
+        <img src="https://m.media-amazon.com/images/I/61FKc3VHYjL._SL1499_.jpg" alt="My Sweet Strawberry Days">
+        <h3>My Sweet Strawberry Days</h3>
+        <p>Cute strawberry-themed journal for girls and teen dreamers.</p>
+        <a class="buy-btn" href="https://www.amazon.com/dp/B0FZVH437L" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+
+      <!-- Book 10 -->
+      <div class="book-card">
+        <img src="https://m.media-amazon.com/images/I/61zZtZDdhzL._SL1499_.jpg" alt="Sweet Strawberry Days">
+        <h3>Sweet Strawberry Days</h3>
+        <p>Cute pink journal for kids and strawberry lovers, kawaii aesthetic.</p>
+        <a class="buy-btn" href="https://www.amazon.com/dp/B0FZTDD1H5" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+
+      <!-- Book 11 -->
+      <div class="book-card">
+        <img src="https://m.media-amazon.com/images/I/616yWNlaqYL._SL1499_.jpg" alt="Stay Kind, Stay Magical (Alt)">
+        <h3>Stay Kind, Stay Magical</h3>
+        <p>Daily To-Do Planner 2026: Organize life with positivity, motivation, and style.</p>
+        <a class="buy-btn" href="https://www.amazon.com/dp/B0G13462JZ" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+
+      <!-- Book 12 -->
+      <div class="book-card">
+        <img src="https://m.media-amazon.com/images/I/51H-SCLLcPL._SL1499_.jpg" alt="Planner Book #12">
+        <h3>Planner Book #12</h3>
+        <p>Organize your daily life with focus and productivity.</p>
+        <a class="buy-btn" href="https://www.amazon.com/dp/B0G12RJR3G" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+
+      <!-- Book 13 (corrected link) -->
+      <div class="book-card">
+        <img src="https://m.media-amazon.com/images/I/61uTcT5KkoL._SL1499_.jpg" alt="Planner Book #13">
+        <h3>Planner Book #13</h3>
+        <p>Premium daily planner for goal setting and productivity.</p>
+        <a class="buy-btn" href="https://www.amazon.com/dp/B0G1BBQ2ZJ" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="articles">
+    <h2 class="section-title">Motivational Articles</h2>
+
+    <!-- ADS Placeholder (Articles) -->
+    <div class="ad-placeholder">AdSense spot (articles) — paste your AdSense code here when ready</div>
+
+    <div class="layout">
+      <div class="accordion" id="accordion">
+        <!-- We'll place 15 article accordion items -->
+        <!-- Article 1 -->
+        <div class="acc-item">
+          <div class="acc-title" data-target="acc1">
+            <h3>1. The Power of Persistence</h3>
+            <span>+</span>
+          </div>
+          <div class="acc-content" id="acc1">
+            <p>Persistence means showing up again and again, even when progress is slow. Little daily actions compound into life-changing results. Use a planner to track the tiny wins—crossing off small tasks builds momentum and belief.</p>
+            <p>Start today: write three tiny actions you can complete in 15 minutes. Put them in your planner and celebrate when they’re done. Over time, persistence will make those small steps become big achievements.</p>
+          </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="acc-item">
+          <div class="acc-title" data-target="acc2">
+            <h3>2. Overcoming Challenges</h3><span>+</span>
+          </div>
+          <div class="acc-content" id="acc2">
+            <p>Challenges are part of growth. A planner helps you break problems into manageable parts so you can solve them step by step. When overwhelmed, list the next three concrete steps and assign them dates—clarity reduces fear.</p>
+            <p>Remember: every challenge contains a lesson. Track progress in your planner and review weekly — you’ll see how far you’ve come and feel encouraged to continue.</p>
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="acc-item">
+          <div class="acc-title" data-target="acc3">
+            <h3>3. Building Self-Confidence</h3><span>+</span>
+          </div>
+          <div class="acc-content" id="acc3">
+            <p>Confidence grows from consistent action. Use your planner to set small, achievable goals and record wins. When you look back and see completed tasks, self-trust strengthens.</p>
+            <p>Write daily affirmations and a short 'done' list each night. Over weeks, your planner becomes proof of competence and fuels confidence.</p>
+          </div>
+        </div>
+
+        <!-- Article 4 -->
+        <div class="acc-item">
+          <div class="acc-title" data-target="acc4">
+            <h3>4. The Art of Focus</h3><span>+</span>
+          </div>
+          <div class="acc-content" id="acc4">
+            <p>Focus is a skill you train. Use time-blocks in your planner—assign 25–50 minute sessions for single tasks and a short break after each. This creates deep-work pockets that protect your attention.</p>
+            <p>Start with one focused block per day; increase gradually. Tracking your sessions in a planner helps spot what interrupts you and how to remove distractions.</p>
+          </div>
+        </div>
+
+        <!-- Article 5 -->
+        <div class="acc-item">
+          <div class="acc-title" data-target="acc5">
+            <h3>5. Time Management Secrets</h3><span>+</span>
+          </div>
+          <div class="acc-content" id="acc5">
+            <p>Time management isn’t about filling every minute; it’s about choosing what matters. Prioritize 3 MITs (Most Important Tasks) daily in your planner. Do those first when energy is high.</p>
+            <p>Review weekly: which tasks produced the most value? Adjust next week’s plan and protect your MITs from distractions.</p>
+          </div>
+        </div>
+
+        <!-- Article 6 -->
+        <div class="acc-item">
+          <div class="acc-title" data-target="acc6">
+            <h3>6. Achieving Your Goals</h3><span>+</span>
+          </div>
+          <div class="acc-content" id="acc6">
+            <p>Turn big goals into specific monthly and weekly milestones. Place them in your planner and track the small steps. This turns vague dreams into a step-by-step system that moves you forward consistently.</p>
+            <p>Make review sessions sacred—once a week check your progress and tweak the plan so you keep momentum.</p>
+          </div>
+        </div>
+
+        <!-- Article 7 -->
+        <div class="acc-item">
+          <div class="acc-title" data-target="acc7">
+            <h3>7. Positive Thinking Everyday</h3><span>+</span>
+          </div>
+          <div class="acc-content" id="acc7">
+            <p>A positive mindset doesn’t ignore reality—it chooses helpful interpretations. Use your planner to note three daily things you’re grateful for and one win. This trains your mind to notice progress, not just problems.</p>
+            <p>Over time, gratitude entries lift mood, reduce stress, and make you more resilient.</p>
+          </div>
+        </div>
+
+        <!-- Article 8 -->
+        <div class="acc-item">
+          <div class="acc-title" data-target="acc8">
+            <h3>8. Embracing Change</h3><span>+</span>
+          </div>
+          <div class="acc-content" id="acc8">
+            <p>Change is constant—use your planner as an anchor. When life shifts, re-prioritize in writing. Recording new steps helps you feel in control and reduces the chaos that change can bring.</p>
+            <p>Plan for small, flexible actions and review often; flexibility + structure = steady progress through transitions.</p>
+          </div>
+        </div>
+
+        <!-- Article 9 -->
+        <div class="acc-item">
+          <div class="acc-title" data-target="acc9">
+            <h3>9. Learning from Failure</h3><span>+</span>
+          </div>
+          <div class="acc-content" id="acc9">
+            <p>Failure gives feedback. Use a section in your planner to note what didn’t work and one adjustment to try next. This converts mistakes into experiments and keeps you learning forward.</p>
+            <p>Small, regular adjustments are the fastest path to improvement.</p>
+          </div>
+        </div>
+
+        <!-- Article 10 -->
+        <div class="acc-item">
+          <div class="acc-title" data-target="acc10">
+            <h3>10. The Importance of Discipline</h3><span>+</span>
+          </div>
+          <div class="acc-content" id="acc10">
+            <p>Discipline is choosing what you want most over what you want now. A planner supports discipline by making commitments visible. When you schedule a task and honor it, discipline becomes a habit.</p>
+            <p>Start with small commitments and slowly build—consistency beats intensity.</p>
+          </div>
+        </div>
+
+        <!-- Article 11 -->
+        <div class="acc-item">
+          <div class="acc-title" data-target="acc11">
+            <h3>11. Finding Inner Peace</h3><span>+</span>
+          </div>
+          <div class="acc-content" id="acc11">
+            <p>Inner peace comes when your actions match your values. Use your planner to schedule time for things that calm you—walks, reading, prayer, creative time. Protect those appointments as you would a meeting.</p>
+            <p>Gradually your planner will reflect a balanced life, not just tasks.</p>
+          </div>
+        </div>
+
+        <!-- Article 12 -->
+        <div class="acc-item">
+          <div class="acc-title" data-target="acc12">
+            <h3>12. Gratitude as a Habit</h3><span>+</span>
+          </div>
+          <div class="acc-content" id="acc12">
+            <p>Gratitude rewires your attention. Spend two minutes each evening writing 3 things you’re grateful for in your planner. This tiny ritual improves mood and increases long-term happiness.</p>
+            <p>Keep it simple and consistent—consistency matters more than length.</p>
+          </div>
+        </div>
+
+        <!-- Article 13 -->
+        <div class="acc-item">
+          <div class="acc-title" data-target="acc13">
+            <h3>13. The Power of Kindness</h3><span>+</span>
+          </div>
+          <div class="acc-content" id="acc13">
+            <p>Small acts of kindness amplify your sense of purpose. Plan one kind action every week—send a note, help someone, or share a resource. Write it in your planner and schedule it like any other appointment.</p>
+            <p>Kindness creates ripple effects that return to you in unexpected ways.</p>
+          </div>
+        </div>
+
+        <!-- Article 14 -->
+        <div class="acc-item">
+          <div class="acc-title" data-target="acc14">
+            <h3>14. Mindset for Success</h3><span>+</span>
+          </div>
+          <div class="acc-content" id="acc14">
+            <p>Success starts with a growth mindset—believing skills can be built with practice. Use your planner to set tiny skill-building tasks and track progress. Celebrate improvements, not perfection.</p>
+            <p>Daily practice recorded in a planner compounds faster than sporadic effort.</p>
+          </div>
+        </div>
+
+        <!-- Article 15 -->
+        <div class="acc-item">
+          <div class="acc-title" data-target="acc15">
+            <h3>15. Stay Motivated Daily</h3><span>+</span>
+          </div>
+          <div class="acc-content" id="acc15">
+            <p>Create a tiny morning ritual in your planner—write one focus for the day and one win you want to achieve. Checking this ritual each morning gives daily direction and keeps motivation alive.</p>
+            <p>Pair the ritual with an evening note of what went well; the loop keeps motivation self-reinforcing.</p>
+          </div>
+        </div>
+
+        <!-- ADHD-focused article (special) -->
+        <div class="acc-item">
+          <div class="acc-title" data-target="accADHD">
+            <h3>16. For the Distracted Heart — How Planners Help When Focus Feels Impossible (ADHD-friendly)</h3><span>+</span>
+          </div>
+          <div class="acc-content" id="accADHD">
+            <p>Feeling scattered doesn’t mean you’re failing — it means your mind works differently. A gentle planner isn’t about forcing productivity; it’s a kind companion. Start with short lists of 3 very small tasks, and let success be measured by completion, not by how much you did.</p>
+            <p>Use visuals: highlight one priority in bright color, add timers for short bursts (10–20 minutes), and give yourself permission to rest between bursts. Track the time of day when you feel sharpest and place your hardest task there. Celebrate tiny wins in your planner — these are real victories that rebuild confidence.</p>
+            <p>Above all: the planner is your ally. Treat it as a soft structure that adapts to you, not a strict judge. Over time, small, repeated wins create calm, momentum, and a sense that you can steer your day, even when your mind pulls in many directions.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar: quick links, contact and Ad placeholder -->
+      <aside class="sidebar">
+        <div class="meta"><strong>Articles quick links</strong></div>
+        <ul style="padding-left:18px;color:var(--muted);margin-top:0;">
+          <li><a href="#acc1">The Power of Persistence</a></li>
+          <li><a href="#acc3">Building Self-Confidence</a></li>
+          <li><a href="#acc4">The Art of Focus</a></li>
+          <li><a href="#accADHD">For the Distracted Heart (ADHD)</a></li>
+        </ul>
+
+        <div style="margin-top:12px" class="meta"><strong>Get in touch</strong></div>
+        <p class="small">Email: <a href="mailto:imata.space@gmail.com">imata.space@gmail.com</a></p>
+
+        <div class="ad-placeholder" style="margin-top:14px">AdSense spot (sidebar) — paste your AdSense code here when ready</div>
+
+        <div style="margin-top:14px">
+          <strong>Quick tips:</strong>
+          <ul style="padding-left:18px;color:var(--muted);margin-top:8px">
+            <li>Start small — 3 tasks/day</li>
+            <li>Use colors for priorities</li>
+            <li>Review weekly</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <div style="background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.04)">
+      <p style="color:var(--muted)">Lovely Planners Studio creates premium, modern planners and journals designed to help you organize your life, reach goals, and foster daily habits that last. We believe small consistent steps — written down, scheduled, and celebrated — change lives. Our products are designed for everyday people who want clarity, calm, and momentum.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <div style="display:grid;gap:12px">
+      <div style="background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.04)">
+        <p class="small">For questions, partnerships or press — email us at <a href="mailto:imata.space@gmail.com">imata.space@gmail.com</a></p>
+        <form id="contactForm" onsubmit="event.preventDefault();document.getElementById('contactForm').style.display='none';document.getElementById('thanks').style.display='block'">
+          <div class="form-row">
+            <input type="text" id="name" placeholder="Your name" required>
+          </div>
+          <div style="margin-top:8px">
+            <input type="email" id="email" placeholder="Your email" required>
+          </div>
+          <div style="margin-top:8px">
+            <textarea id="message" rows="4" placeholder="Message"></textarea>
+          </div>
+          <div style="margin-top:8px">
+            <button class="btn-primary" type="submit">Send Message</button>
+          </div>
+        </form>
+        <div id="thanks" style="display:none;padding:12px;background:#ecfdf5;border-radius:8px;margin-top:8px;color:#065f46">
+          Thank you — this form is a visual demo. To receive messages, connect a backend form action or an external form service (e.g., Formspree, Netlify Forms).
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy" style="margin-top:18px">
+    <h2 class="section-title">Privacy Policy</h2>
+    <div style="background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.04);color:var(--muted)">
+      <p>We do not collect personal information without consent. Contact details provided are used only to respond to inquiries. We do not sell or distribute personal data to third parties. This site may contain affiliate links to Amazon; purchases help support our work.</p>
+    </div>
+  </section>
+
+  <section id="terms" style="margin-top:18px">
+    <h2 class="section-title">Terms & Conditions</h2>
+    <div style="background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.04);color:var(--muted)">
+      <p>Content is provided for informational purposes. Purchases take place on Amazon; we are not responsible for third-party transactions. By using this site you agree to these terms.</p>
+    </div>
+  </section>
+
+  <section id="disclaimer" style="margin-top:18px">
+    <h2 class="section-title">Disclaimer</h2>
+    <div style="background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.04);color:var(--muted)">
+      <p>All product images and listings link to Amazon. We do our best to keep links accurate; if a book is unavailable on Amazon, it may be temporarily out of stock. For purchases and refunds, follow Amazon policies.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p class="small">© 2025 Lovely Planners Studio — All Rights Reserved</p>
+    <p class="small">Contact: <a href="mailto:imata.space@gmail.com">imata.space@gmail.com</a></p>
+    <p style="margin-top:6px">
+      <a href="#about">About</a> • <a href="#contact">Contact</a> • <a href="#privacy">Privacy</a> • <a href="#terms">Terms</a> • <a href="#disclaimer">Disclaimer</a>
+    </p>
+  </footer>
+</main>
+
+<script>
+  // Accordion behavior
+  document.querySelectorAll('.acc-title').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      const targetId = btn.getAttribute('data-target');
+      const el = document.getElementById(targetId);
+      const open = el.classList.contains('open');
+      // close all
+      document.querySelectorAll('.acc-content').forEach(c=>c.classList.remove('open'));
+      // toggle this
+      if(!open) el.classList.add('open');
+      // refresh icons
+      document.querySelectorAll('.acc-title span').forEach(s=>s.textContent='+');
+      if(!open) btn.querySelector('span').textContent='−';
+    });
+  });
+
+  // Link hash open if present
+  if(location.hash){
+    const h = location.hash.replace('#','');
+    const el = document.getElementById(h);
+    if(el && el.classList.contains('acc-content')) el.classList.add('open');
+  }
+</script>
 
 </body>
-</html>
+</html>ض
