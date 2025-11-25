@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lovely Planners Studio — Planners, Journals & Calm Productivity Tools</title>
-  <meta name="description" content="Lovely Planners Studio creates elegant planners, journals and calm productivity tools for kids, teens, adults and families. Perfect for gifts, New Year resets and everyday routines — including gentle layouts that support busy and distracted minds." />
+  <meta name="description" content="Lovely Planners Studio creates elegant planners, journals and calm productivity tools for kids, teens, adults and families. Perfect for gifts, New Year resets and everyday routines — with gentle layouts that support busy and distracted minds." />
   <meta name="keywords" content="planner, daily planner, journal, productivity, planner gift, 2026 planner, strawberry journal, unicorn notebook, gamer planner, anime planner, family planner, kids journal, teen planner, focus planner" />
   <link rel="canonical" href="https://www.lovelyplannersstudio.com/" />
   <meta name="robots" content="index,follow" />
@@ -52,6 +52,7 @@
       --card:#ffffff;
       --accent:#ff6b8a;
       --accent-soft:#ffe3ec;
+      --accent-mint:#c7f2e8;
       --gold:#b8860b;
       --muted:#6b6b6b;
       --text:#1b1b1b;
@@ -62,9 +63,10 @@
       --font:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
     }
 
-    *{box-sizing:border-box;margin:0;padding:0;}
+    *{box-sizing:border-box;}
 
     body{
+      margin:0;
       font-family:var(--font);
       background:var(--bg);
       color:var(--text);
@@ -79,9 +81,9 @@
       position:sticky;
       top:0;
       z-index:50;
-      background:linear-gradient(90deg,#b8860b,#ffb347);
+      background:linear-gradient(90deg,#0f172a,#1f2937);
       color:#fff;
-      box-shadow:0 10px 30px rgba(0,0,0,0.18);
+      box-shadow:0 10px 30px rgba(0,0,0,0.35);
     }
     .nav-wrap{
       max-width:var(--maxw);
@@ -99,13 +101,12 @@
       gap:10px;
     }
     .brand-logo{
-      width:58px;
-      height:58px;
+      width:56px;
+      height:56px;
       border-radius:999px;
       overflow:hidden;
       background:#fff;
-      box-shadow:0 6px 16px rgba(0,0,0,0.18);
-      flex-shrink:0;
+      box-shadow:0 6px 20px rgba(0,0,0,0.4);
     }
     .brand-logo img{
       width:100%;
@@ -114,8 +115,8 @@
     }
     .brand-text h1{
       margin:0;
-      font-size:20px;
-      letter-spacing:.06em;
+      font-size:19px;
+      letter-spacing:.10em;
       text-transform:uppercase;
     }
     .brand-text span{
@@ -125,40 +126,39 @@
     nav{
       display:flex;
       align-items:center;
-      gap:10px;
+      gap:8px;
       flex-wrap:wrap;
     }
     .nav-link{
-      font-size:14px;
+      font-size:13px;
       padding:6px 10px;
       border-radius:999px;
-      color:#fff;
-      font-weight:600;
+      color:#e5e7eb;
+      font-weight:500;
     }
     .nav-link:hover{
-      background:rgba(0,0,0,0.18);
+      background:rgba(255,255,255,0.12);
       text-decoration:none;
     }
     .btn-social{
-      font-size:13px;
-      padding:6px 12px;
+      font-size:12px;
+      padding:6px 11px;
       border-radius:999px;
-      border:1px solid rgba(255,255,255,0.7);
-      color:#fff;
+      border:1px solid rgba(248,250,252,0.7);
+      color:#f9fafb;
       font-weight:600;
-      background:rgba(0,0,0,0.12);
+      background:rgba(15,23,42,0.7);
     }
     .btn-social:hover{
-      background:rgba(0,0,0,0.22);
+      background:rgba(15,23,42,0.9);
       text-decoration:none;
     }
-
     @media(max-width:720px){
       .nav-wrap{flex-direction:column;align-items:flex-start;}
       nav{width:100%;justify-content:flex-start;}
     }
 
-    /* MAIN LAYOUT */
+    /* LAYOUT */
     main{
       max-width:var(--maxw);
       margin:22px auto 32px;
@@ -167,43 +167,40 @@
 
     /* HERO */
     .hero{
-      background:radial-gradient(circle at top left,#fff1f6,#fffdf8);
+      background:radial-gradient(circle at top left,#e0f7ff,#fffdf8);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
-      padding:22px 18px 20px;
-      margin-bottom:22px;
+      padding:22px 18px 18px;
+      margin-bottom:18px;
+      border:1px solid rgba(148,163,184,0.3);
     }
     .hero-badges{
       display:flex;
       flex-wrap:wrap;
       gap:8px;
       margin-bottom:6px;
-      font-size:11px;
     }
     .chip{
+      font-size:11px;
       padding:4px 10px;
       border-radius:999px;
-      background:#fff7da;
-      color:#b86a00;
+      background:#e0f2fe;
+      color:#0f172a;
       font-weight:600;
     }
-    .chip-soft{
-      background:var(--accent-soft);
-      color:#b83260;
-    }
-    .hero h1{
+    .hero h2{
       margin:0 0 6px;
-      font-size:24px;
-      color:#3a2600;
+      font-size:23px;
+      color:#0f172a;
     }
     .hero p{
       margin:0;
       font-size:14px;
       color:var(--muted);
-      max-width:650px;
+      max-width:640px;
     }
     .hero-cta-row{
-      margin-top:12px;
+      margin-top:10px;
       display:flex;
       flex-wrap:wrap;
       gap:10px;
@@ -213,37 +210,33 @@
       padding:9px 16px;
       border-radius:999px;
       border:none;
-      background:var(--accent);
-      color:#fff;
+      background:#22c55e;
+      color:#06281a;
       font-size:13px;
-      font-weight:600;
+      font-weight:700;
       cursor:pointer;
-      display:inline-block;
     }
-    .btn-main:hover{
-      filter:brightness(1.05);
-      text-decoration:none;
-    }
+    .btn-main:hover{filter:brightness(1.05);}
     .hero-note{
       font-size:11px;
       color:var(--muted);
     }
 
     /* SECTION TITLES */
-    h2.section-title{
-      margin:10px 0 4px;
-      font-size:20px;
-      color:#4a3003;
+    h3.section-title{
+      margin:20px 0 6px;
+      font-size:18px;
+      color:#111827;
     }
     .section-sub{
       font-size:12px;
       color:var(--muted);
-      margin-bottom:10px;
+      margin-bottom:8px;
     }
 
     /* BOOKS GRID */
     .books-grid{
-      margin-top:8px;
+      margin-top:10px;
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
       gap:16px;
@@ -252,7 +245,7 @@
       background:var(--card);
       border-radius:var(--radius);
       border:1px solid var(--border);
-      box-shadow:var(--shadow);
+      box-shadow:0 14px 34px rgba(15,23,42,0.06);
       padding:10px 10px 12px;
       display:flex;
       flex-direction:column;
@@ -263,16 +256,26 @@
       object-fit:cover;
       border-radius:10px;
     }
-    .book-card h3{
+    .book-card h4{
       margin:9px 2px 4px;
       font-size:15px;
-      color:#2b1b02;
+      color:#111827;
     }
     .book-card p{
       font-size:12px;
       color:var(--muted);
       margin:0 2px;
       flex:1;
+    }
+    .tag-pill{
+      display:inline-block;
+      margin-top:4px;
+      padding:3px 7px;
+      border-radius:999px;
+      background:#e0f2fe;
+      color:#0369a1;
+      font-size:11px;
+      font-weight:600;
     }
     .buy-btn{
       display:inline-block;
@@ -291,7 +294,111 @@
       filter:brightness(1.05);
     }
 
-    /* GUIDES / ARTICLE */
+    /* GUIDES LAYOUT */
+    .guides-layout{
+      margin-top:26px;
+      display:grid;
+      grid-template-columns:minmax(0,2.1fr) minmax(0,1fr);
+      gap:18px;
+    }
+    @media(max-width:880px){
+      .guides-layout{grid-template-columns:1fr;}
+    }
+    .guide-main{
+      background:var(--card);
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      padding:14px 16px 16px;
+      font-size:14px;
+      color:var(--muted);
+    }
+    .guide-main h2{
+      margin:0 0 6px;
+      font-size:19px;
+      color:#111827;
+    }
+    .guide-main h3{
+      margin:14px 0 4px;
+      font-size:16px;
+      color:#111827;
+    }
+    .guide-main h4{
+      margin:12px 0 4px;
+      font-size:14px;
+      color:#111827;
+    }
+    .guide-main p{
+      margin:0 0 8px;
+    }
+    .guide-main ul{
+      margin:0 0 8px;
+      padding-left:18px;
+    }
+
+    /* SIDEBAR */
+    .sidebar{
+      background:var(--card);
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      padding:14px 14px 16px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .sidebar h4{
+      margin:0 0 6px;
+      font-size:14px;
+      color:#111827;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:3px 8px;
+      border-radius:999px;
+      font-size:11px;
+      background:var(--accent-soft);
+      color:#9f1239;
+      margin-left:6px;
+      font-weight:600;
+    }
+    .sidebar ul{
+      padding-left:18px;
+      margin:4px 0 10px;
+    }
+    .sidebar input[type=search]{
+      width:100%;
+      padding:8px 9px;
+      border-radius:10px;
+      border:1px solid #e5e7eb;
+      font-size:13px;
+    }
+    .sidebar button{
+      margin-top:8px;
+      width:100%;
+      padding:8px 10px;
+      border-radius:10px;
+      border:none;
+      background:#0ea5e9;
+      color:#f9fafb;
+      font-size:13px;
+      font-weight:600;
+      cursor:pointer;
+    }
+    .sidebar button:hover{filter:brightness(1.05);}
+    .sidebar .ad-box{
+      margin-top:12px;
+      padding:10px;
+      border-radius:10px;
+      border:1px dashed rgba(148,163,184,0.7);
+      font-size:11px;
+      background:#f9fafb;
+      color:#4b5563;
+      text-align:center;
+    }
+
+    /* OTHER INFO SECTIONS */
     .info-section{
       margin-top:26px;
     }
@@ -300,38 +407,19 @@
       border-radius:var(--radius);
       border:1px solid var(--border);
       box-shadow:var(--shadow);
-      padding:16px 16px 18px;
+      padding:14px 14px 16px;
       font-size:13px;
       color:var(--muted);
     }
-    .info-card h3{
-      font-size:18px;
-      margin-bottom:8px;
-      color:#4a3003;
-    }
-    .info-card h4{
-      font-size:15px;
-      margin:12px 0 6px;
-      color:#4a3003;
-    }
-    .info-card p{
-      margin:0 0 8px;
-    }
-    .info-card ul{
-      margin:0 0 8px 18px;
-    }
-    .info-card li{
-      margin-bottom:4px;
-    }
+    .info-card p{margin:0 0 6px;}
+    .info-card p:last-child{margin-bottom:0;}
 
-    .mini-guides{
-      margin-top:12px;
-    }
+    .small{font-size:12px;color:var(--muted);}
 
     /* FOOTER */
     footer{
       margin-top:26px;
-      padding-top:16px;
+      padding-top:14px;
       border-top:1px solid var(--border);
       font-size:12px;
       color:var(--muted);
@@ -341,9 +429,13 @@
       margin:0 4px;
       font-size:12px;
     }
+
+    /* UTILITY */
+    .inline-link{color:#0ea5e9;}
+    .inline-link:hover{text-decoration:underline;}
   </style>
 
-  <!-- STRUCTURED DATA JSON-LD -->
+  <!-- STRUCTURED DATA JSON-LD (fixed: no offers => no price errors) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -353,8 +445,7 @@
         "@id": "https://www.lovelyplannersstudio.com/#website",
         "url": "https://www.lovelyplannersstudio.com/",
         "name": "Lovely Planners Studio",
-        "description": "Planners and journals for calm, focus and beautiful everyday routines — for kids, teens, adults and families.",
-        "inLanguage": "en"
+        "description": "Planners and journals for calm, focus and beautiful everyday routines — for kids, teens, adults and families."
       },
       {
         "@type": "Organization",
@@ -373,171 +464,110 @@
         "name": "2026 Planners & Journals",
         "itemListElement": [
           {
-            "@type": "Product",
-            "name": "Golden Year 2026 – Daily To-Do Planner for an Organized Life",
-            "image": "https://m.media-amazon.com/images/I/41GryDZx6pL._SY445_SX342_ML2_.jpg",
-            "description": "Daily to-do planner with priorities and reflection to make 2026 more intentional and organized.",
-            "brand": { "@type": "Brand", "name": "Lovely Planners Studio" },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://amzn.to/4i6f6Ay",
-              "availability": "https://schema.org/InStock"
-            }
+            "@type":"Product",
+            "name":"Golden Year 2026 – Daily To-Do Planner for an Organized Life",
+            "image":"https://m.media-amazon.com/images/I/41GryDZx6pL._SY445_SX342_ML2_.jpg",
+            "description":"Daily to-do planner with priorities and reflection to make 2026 more intentional and organized.",
+            "url":"https://amzn.to/4i6f6Ay",
+            "brand":{"@type":"Brand","name":"Lovely Planners Studio"}
           },
           {
-            "@type": "Product",
-            "name": "Serene Days 2026 – Daily To-Do Planner for Calm and Focused Living",
-            "image": "https://m.media-amazon.com/images/I/61tVNSDlxdL._SY522_.jpg",
-            "description": "Soothing layouts and mood trackers to support calmer, more focused days.",
-            "brand": { "@type": "Brand", "name": "Lovely Planners Studio" },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://amzn.to/4pkkVNm",
-              "availability": "https://schema.org/InStock"
-            }
+            "@type":"Product",
+            "name":"Serene Days 2026 – Daily To-Do Planner for Calm and Focused Living",
+            "image":"https://m.media-amazon.com/images/I/61tVNSDlxdL._SY522_.jpg",
+            "description":"Soothing layouts and mood trackers to support calmer, more focused days.",
+            "url":"https://amzn.to/4pkkVNm",
+            "brand":{"@type":"Brand","name":"Lovely Planners Studio"}
           },
           {
-            "@type": "Product",
-            "name": "Rise & Shine 2026 – Daily Planner for a Fresh Start Every Day",
-            "image": "https://m.media-amazon.com/images/I/515miG+dxVL._SL1499_.jpg",
-            "description": "Motivational daily planner to keep you energized and inspired across 2026.",
-            "brand": { "@type": "Brand", "name": "Lovely Planners Studio" },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://amzn.to/4i6Ciie",
-              "availability": "https://schema.org/InStock"
-            }
+            "@type":"Product",
+            "name":"Rise & Shine 2026 – Daily Planner for a Fresh Start Every Day",
+            "image":"https://m.media-amazon.com/images/I/515miG+dxVL._SL1499_.jpg",
+            "description":"Motivational daily planner to keep you energized and inspired across 2026.",
+            "url":"https://amzn.to/4i6Ciie",
+            "brand":{"@type":"Brand","name":"Lovely Planners Studio"}
           },
           {
-            "@type": "Product",
-            "name": "Dream Planner 2026 — Anime Style Daily Organizer",
-            "image": "https://m.media-amazon.com/images/I/51xjZsVXwpL._SY445_SX342_ControlCacheEqualizer_.jpg",
-            "description": "Anime-style planner with creative prompts and mood trackers for manga lovers.",
-            "brand": { "@type": "Brand", "name": "Lovely Planners Studio" },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://amzn.to/4oMkjA5",
-              "availability": "https://schema.org/InStock"
-            }
+            "@type":"Product",
+            "name":"Dream Planner 2026 — Anime Style Daily Organizer",
+            "image":"https://m.media-amazon.com/images/I/51xjZsVXwpL._SY445_SX342_ControlCacheEqualizer_.jpg",
+            "description":"Anime-style planner with creative prompts and mood trackers for manga lovers.",
+            "url":"https://amzn.to/4oMkjA5",
+            "brand":{"@type":"Brand","name":"Lovely Planners Studio"}
           },
           {
-            "@type": "Product",
-            "name": "Level Up 2026: Daily To-Do Planner for Gamers",
-            "image": "https://m.media-amazon.com/images/I/41Qtuy1EAvL._SY445_SX342_ControlCacheEqualizer_.jpg",
-            "description": "Gamified planner that turns tasks into quests for teen and adult gamers.",
-            "brand": { "@type": "Brand", "name": "Lovely Planners Studio" },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://amzn.to/3LMVSEd",
-              "availability": "https://schema.org/InStock"
-            }
+            "@type":"Product",
+            "name":"Level Up 2026: Daily To-Do Planner for Gamers",
+            "image":"https://m.media-amazon.com/images/I/41Qtuy1EAvL._SY445_SX342_ControlCacheEqualizer_.jpg",
+            "description":"Gamified planner that turns tasks into quests for teen and adult gamers.",
+            "url":"https://amzn.to/3LMVSEd",
+            "brand":{"@type":"Brand","name":"Lovely Planners Studio"}
           },
           {
-            "@type": "Product",
-            "name": "Daily To-Do Planner 2026: Simple and Elegant Daily Organizer",
-            "image": "https://m.media-amazon.com/images/I/512YIqQHrIL._SY522_.jpg",
-            "description": "Minimal, distraction-free planner focused on clear daily structure.",
-            "brand": { "@type": "Brand", "name": "Lovely Planners Studio" },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://amzn.to/4i9PfYL",
-              "availability": "https://schema.org/InStock"
-            }
+            "@type":"Product",
+            "name":"Daily To-Do Planner 2026: Simple and Elegant Daily Organizer",
+            "image":"https://m.media-amazon.com/images/I/512YIqQHrIL._SY522_.jpg",
+            "description":"Minimal, distraction-free planner focused on clear daily structure.",
+            "url":"https://amzn.to/4i9PfYL",
+            "brand":{"@type":"Brand","name":"Lovely Planners Studio"}
           },
           {
-            "@type": "Product",
-            "name": "Shine Bright 2026 — Daily Planner for Girls and Teens",
-            "image": "https://m.media-amazon.com/images/I/71olRvxqfPL._SL1499_.jpg",
-            "description": "Fun, colorful planner with positivity prompts for girls and teens.",
-            "brand": { "@type": "Brand", "name": "Lovely Planners Studio" },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://amzn.to/3LMXLAJ",
-              "availability": "https://schema.org/InStock"
-            }
+            "@type":"Product",
+            "name":"Shine Bright 2026 — Daily Planner for Girls and Teens",
+            "image":"https://m.media-amazon.com/images/I/71olRvxqfPL._SL1499_.jpg",
+            "description":"Fun, colorful planner with positivity prompts for girls and teens.",
+            "url":"https://amzn.to/3LMXLAJ",
+            "brand":{"@type":"Brand","name":"Lovely Planners Studio"}
           },
           {
-            "@type": "Product",
-            "name": "Sweet Strawberry Journal",
-            "image": "https://m.media-amazon.com/images/I/41-T2xmL4ML._SY445_SX342_ControlCacheEqualizer_.jpg",
-            "description": "Cute pink strawberry notebook for daily thoughts, gratitude and goals.",
-            "brand": { "@type": "Brand", "name": "Lovely Planners Studio" },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://amzn.to/4oNqwf3",
-              "availability": "https://schema.org/InStock"
-            }
+            "@type":"Product",
+            "name":"Sweet Strawberry Journal",
+            "image":"https://m.media-amazon.com/images/I/41-T2xmL4ML._SY445_SX342_ControlCacheEqualizer_.jpg",
+            "description":"Cute pink strawberry notebook for daily thoughts, gratitude and goals.",
+            "url":"https://amzn.to/4oNqwf3",
+            "brand":{"@type":"Brand","name":"Lovely Planners Studio"}
           },
           {
-            "@type": "Product",
-            "name": "My Sweet Strawberry Days",
-            "image": "https://m.media-amazon.com/images/I/61FKc3VHYjL._SL1499_.jpg",
-            "description": "Strawberry-themed journal for girls and teen dreamers.",
-            "brand": { "@type": "Brand", "name": "Lovely Planners Studio" },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://amzn.to/3X8vqax",
-              "availability": "https://schema.org/InStock"
-            }
+            "@type":"Product",
+            "name":"My Sweet Strawberry Days",
+            "image":"https://m.media-amazon.com/images/I/61FKc3VHYjL._SL1499_.jpg",
+            "description":"Strawberry-themed journal for girls and teen dreamers.",
+            "url":"https://amzn.to/3X8vqax",
+            "brand":{"@type":"Brand","name":"Lovely Planners Studio"}
           },
           {
-            "@type": "Product",
-            "name": "Sweet Strawberry Days – Cute Pink Journal for Kids and Strawberry Lovers",
-            "image": "https://m.media-amazon.com/images/I/61zZtZDdhzL._SL1499_.jpg",
-            "description": "Soft pink kawaii journal for kids, teens and strawberry lovers.",
-            "brand": { "@type": "Brand", "name": "Lovely Planners Studio" },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://amzn.to/4pqoHVz",
-              "availability": "https://schema.org/InStock"
-            }
+            "@type":"Product",
+            "name":"Sweet Strawberry Days – Cute Pink Journal for Kids and Strawberry Lovers",
+            "image":"https://m.media-amazon.com/images/I/61zZtZDdhzL._SL1499_.jpg",
+            "description":"Soft pink kawaii journal for kids, teens and strawberry lovers.",
+            "url":"https://amzn.to/4pqoHVz",
+            "brand":{"@type":"Brand","name":"Lovely Planners Studio"}
           },
           {
-            "@type": "Product",
-            "name": "Stay Organized, Stay Motivated, Stay in the Game",
-            "image": "https://m.media-amazon.com/images/I/616yWNlaqYL._SL1499_.jpg",
-            "description": "Futuristic gaming-inspired productivity planner for focused routines.",
-            "brand": { "@type": "Brand", "name": "Lovely Planners Studio" },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://amzn.to/4poJgli",
-              "availability": "https://schema.org/InStock"
-            }
+            "@type":"Product",
+            "name":"Stay Organized, Stay Motivated, Stay in the Game",
+            "image":"https://m.media-amazon.com/images/I/616yWNlaqYL._SL1499_.jpg",
+            "description":"Futuristic gaming-inspired productivity planner for focused routines.",
+            "url":"https://amzn.to/4poJgli",
+            "brand":{"@type":"Brand","name":"Lovely Planners Studio"}
           },
           {
-            "@type": "Product",
-            "name": "Stay Kind, Stay Magical — Daily To-Do Planner 2026",
-            "image": "https://m.media-amazon.com/images/I/51H-SCLLcPL._SL1499_.jpg",
-            "description": "Kindness-focused planner that blends motivation, positivity and structure.",
-            "brand": { "@type": "Brand", "name": "Lovely Planners Studio" },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://amzn.to/48fjAka",
-              "availability": "https://schema.org/InStock"
-            }
+            "@type":"Product",
+            "name":"Stay Kind, Stay Magical — Daily To-Do Planner 2026",
+            "image":"https://m.media-amazon.com/images/I/51H-SCLLcPL._SL1499_.jpg",
+            "description":"Kindness-focused planner that blends motivation, positivity and structure.",
+            "url":"https://amzn.to/48fjAka",
+            "brand":{"@type":"Brand","name":"Lovely Planners Studio"}
           },
           {
-            "@type": "Product",
-            "name": "My Unicorn Fairy World – Cute Journal for Girls who Love Magic",
-            "image": "https://m.media-amazon.com/images/I/61uTcT5KkoL._SL1499_.jpg",
-            "description": "Magical unicorn journal for kids and teens who love fantasy and fairy dreams.",
-            "brand": { "@type": "Brand", "name": "Lovely Planners Studio" },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://amzn.to/43HXjd7",
-              "availability": "https://schema.org/InStock"
-            }
+            "@type":"Product",
+            "name":"My Unicorn Fairy World – Cute Journal for Girls who Love Magic",
+            "image":"https://m.media-amazon.com/images/I/61uTcT5KkoL._SL1499_.jpg",
+            "description":"Magical unicorn journal for kids and teens who love fantasy and fairy dreams.",
+            "url":"https://amzn.to/43HXjd7",
+            "brand":{"@type":"Brand","name":"Lovely Planners Studio"}
           }
         ]
-      },
-      {
-        "@type": "Article",
-        "@id": "https://www.lovelyplannersstudio.com/#gift-article",
-        "headline": "The Gift of Planning: How Beautiful Stationery Transforms Daily Life",
-        "description": "A long-form guide on how gentle planners and beautiful journals can support kids, teens, adults and families in building calm, intentional routines.",
-        "author": { "@type": "Organization", "name": "Lovely Planners Studio" },
-        "publisher": { "@id": "https://www.lovelyplannersstudio.com/#org" },
-        "mainEntityOfPage": { "@id": "https://www.lovelyplannersstudio.com/#guides" }
       }
     ]
   }
@@ -576,25 +606,25 @@
   <!-- HERO -->
   <section class="hero" id="top">
     <div class="hero-badges">
-      <span class="chip">Premium &amp; Gift-Ready</span>
-      <span class="chip chip-soft">Kid–Teen–Adult Friendly</span>
+      <span class="chip">Premium & Gift-Ready</span>
+      <span class="chip">Kid–Teen–Adult Friendly</span>
       <span class="chip">2026 Collection</span>
     </div>
-    <h1>Planners Designed for Calm, Focus &amp; Beautiful Everyday Routines</h1>
+    <h2>Planners Designed for Calm, Focus & Beautiful Everyday Routines</h2>
     <p>
       Lovely Planners Studio creates elegant, gentle planners and journals for every season of life:
       students, professionals, parents, kids, teens, grandparents and anyone who wants their days to feel
       more intentional — and a little more magical.
     </p>
     <div class="hero-cta-row">
-      <a href="#books" class="btn-main">Browse the 2026 Collection</a>
+      <a href="#books"><button class="btn-main">Browse the 2026 Collection</button></a>
       <span class="hero-note">Perfect for holiday gifts, New Year resets and everyday calm.</span>
     </div>
   </section>
 
   <!-- BOOKS SECTION -->
   <section id="books">
-    <h2 class="section-title">📚 2026 Planners &amp; Journals</h2>
+    <h3 class="section-title">📚 2026 Planners & Journals</h3>
     <div class="section-sub">All links are Amazon Associates affiliate links (no extra cost for you).</div>
 
     <div class="books-grid">
@@ -602,152 +632,207 @@
       <!-- 1 -->
       <article class="book-card">
         <img src="https://m.media-amazon.com/images/I/41GryDZx6pL._SY445_SX342_ML2_.jpg" alt="Golden Year 2026 planner cover">
-        <h3>Golden Year 2026 — Daily To-Do Planner</h3>
+        <h4>Golden Year 2026 — Daily To-Do Planner</h4>
         <p>Structured daily pages with priorities, tasks and reflection to make 2026 more intentional, one day at a time.</p>
+        <span class="tag-pill">Great for professionals</span>
         <a class="buy-btn" href="https://amzn.to/4i6f6Ay" target="_blank" rel="noopener noreferrer">View on Amazon</a>
       </article>
 
       <!-- 2 -->
       <article class="book-card">
         <img src="https://m.media-amazon.com/images/I/61tVNSDlxdL._SY522_.jpg" alt="Serene Days 2026 planner cover">
-        <h3>Serene Days 2026 — Calm &amp; Focused Planner</h3>
+        <h4>Serene Days 2026 — Calm & Focused Planner</h4>
         <p>Soft layouts and gentle prompts to organize your day while keeping anxiety lower and focus higher.</p>
+        <span class="tag-pill">Soft & soothing</span>
         <a class="buy-btn" href="https://amzn.to/4pkkVNm" target="_blank" rel="noopener noreferrer">View on Amazon</a>
       </article>
 
       <!-- 3 -->
       <article class="book-card">
-        <img src="https://m.media-amazon.com/images/I/515miG+dxVL._SL1499_.jpg" alt="Rise &amp; Shine 2026 planner cover">
-        <h3>Rise &amp; Shine 2026 — Fresh Start Planner</h3>
+        <img src="https://m.media-amazon.com/images/I/515miG+dxVL._SL1499_.jpg" alt="Rise & Shine 2026 planner cover">
+        <h4>Rise & Shine 2026 — Fresh Start Planner</h4>
         <p>Daily planner built around morning routines, motivation and simple daily wins to keep momentum.</p>
+        <span class="tag-pill">Morning routine lovers</span>
         <a class="buy-btn" href="https://amzn.to/4i6Ciie" target="_blank" rel="noopener noreferrer">View on Amazon</a>
       </article>
 
       <!-- 4 -->
       <article class="book-card">
         <img src="https://m.media-amazon.com/images/I/51xjZsVXwpL._SY445_SX342_ControlCacheEqualizer_.jpg" alt="Dream Planner 2026 anime style cover">
-        <h3>Dream Planner 2026 — Anime Style</h3>
+        <h4>Dream Planner 2026 — Anime Style</h4>
         <p>Manga-inspired daily planner with creative prompts and mood space for anime lovers who want structure with style.</p>
+        <span class="tag-pill">Anime fans</span>
         <a class="buy-btn" href="https://amzn.to/4oMkjA5" target="_blank" rel="noopener noreferrer">View on Amazon</a>
       </article>
 
       <!-- 5 -->
       <article class="book-card">
         <img src="https://m.media-amazon.com/images/I/41Qtuy1EAvL._SY445_SX342_ControlCacheEqualizer_.jpg" alt="Level Up 2026 gamer planner cover">
-        <h3>Level Up 2026 — Planner for Gamers</h3>
+        <h4>Level Up 2026 — Planner for Gamers</h4>
         <p>Turn tasks into quests and track streaks like levels — perfect for teen and adult gamers who want real-life XP.</p>
+        <span class="tag-pill">Gamers & teens</span>
         <a class="buy-btn" href="https://amzn.to/3LMVSEd" target="_blank" rel="noopener noreferrer">View on Amazon</a>
       </article>
 
       <!-- 6 -->
       <article class="book-card">
         <img src="https://m.media-amazon.com/images/I/512YIqQHrIL._SY522_.jpg" alt="Daily To-Do Planner 2026 simple elegant cover">
-        <h3>Daily To-Do Planner 2026 — Simple &amp; Elegant</h3>
+        <h4>Daily To-Do Planner 2026 — Simple & Elegant</h4>
         <p>Minimal, distraction-free layout for people who prefer clean, calm pages without visual noise.</p>
+        <span class="tag-pill">Minimal & clean</span>
         <a class="buy-btn" href="https://amzn.to/4i9PfYL" target="_blank" rel="noopener noreferrer">View on Amazon</a>
       </article>
 
       <!-- 7 -->
       <article class="book-card">
         <img src="https://m.media-amazon.com/images/I/71olRvxqfPL._SL1499_.jpg" alt="Shine Bright 2026 planner for girls and teens cover">
-        <h3>Shine Bright 2026 — Planner for Girls &amp; Teens</h3>
+        <h4>Shine Bright 2026 — Planner for Girls & Teens</h4>
         <p>Colorful pages with positivity prompts designed to make planning feel fun and encouraging for girls and teens.</p>
+        <span class="tag-pill">Teens & students</span>
         <a class="buy-btn" href="https://amzn.to/3LMXLAJ" target="_blank" rel="noopener noreferrer">View on Amazon</a>
       </article>
 
       <!-- 8 -->
       <article class="book-card">
         <img src="https://m.media-amazon.com/images/I/41-T2xmL4ML._SY445_SX342_ControlCacheEqualizer_.jpg" alt="Sweet Strawberry Journal cover">
-        <h3>Sweet Strawberry Journal</h3>
+        <h4>Sweet Strawberry Journal</h4>
         <p>Cute pink strawberry notebook for daily thoughts, little gratitudes and simple goals — ideal for strawberry lovers.</p>
+        <span class="tag-pill">Gift-ready</span>
         <a class="buy-btn" href="https://amzn.to/4oNqwf3" target="_blank" rel="noopener noreferrer">View on Amazon</a>
       </article>
 
       <!-- 9 -->
       <article class="book-card">
         <img src="https://m.media-amazon.com/images/I/61FKc3VHYjL._SL1499_.jpg" alt="My Sweet Strawberry Days journal cover">
-        <h3>My Sweet Strawberry Days</h3>
+        <h4>My Sweet Strawberry Days</h4>
         <p>Strawberry-themed journal for girls and teen dreamers to capture ideas, feelings and small goals.</p>
+        <span class="tag-pill">Dreamers & note-takers</span>
         <a class="buy-btn" href="https://amzn.to/3X8vqax" target="_blank" rel="noopener noreferrer">View on Amazon</a>
       </article>
 
       <!-- 10 -->
       <article class="book-card">
         <img src="https://m.media-amazon.com/images/I/61zZtZDdhzL._SL1499_.jpg" alt="Sweet Strawberry Days cute pink journal cover">
-        <h3>Sweet Strawberry Days — Cute Pink Journal</h3>
+        <h4>Sweet Strawberry Days — Cute Pink Journal</h4>
         <p>Soft pink kawaii journal for kids, teens and anyone who loves sweet strawberry aesthetics.</p>
+        <span class="tag-pill">Kids & kawaii lovers</span>
         <a class="buy-btn" href="https://amzn.to/4pqoHVz" target="_blank" rel="noopener noreferrer">View on Amazon</a>
       </article>
 
       <!-- 11 -->
       <article class="book-card">
         <img src="https://m.media-amazon.com/images/I/616yWNlaqYL._SL1499_.jpg" alt="Stay Organized Stay Motivated gaming planner cover">
-        <h3>Stay Organized, Stay Motivated, Stay in the Game</h3>
+        <h4>Stay Organized, Stay Motivated, Stay in the Game</h4>
         <p>Futuristic gaming-inspired productivity planner to track goals, routines and weekly progress.</p>
+        <span class="tag-pill">Tech & gamer style</span>
         <a class="buy-btn" href="https://amzn.to/4poJgli" target="_blank" rel="noopener noreferrer">View on Amazon</a>
       </article>
 
       <!-- 12 -->
       <article class="book-card">
         <img src="https://m.media-amazon.com/images/I/51H-SCLLcPL._SL1499_.jpg" alt="Stay Kind Stay Magical planner cover">
-        <h3>Stay Kind, Stay Magical — Daily To-Do Planner 2026</h3>
+        <h4>Stay Kind, Stay Magical — Daily To-Do Planner 2026</h4>
         <p>Planner that mixes productivity with kindness prompts so you can work on goals without self-pressure.</p>
+        <span class="tag-pill">Gentle hearts</span>
         <a class="buy-btn" href="https://amzn.to/48fjAka" target="_blank" rel="noopener noreferrer">View on Amazon</a>
       </article>
 
       <!-- 13 -->
       <article class="book-card">
         <img src="https://m.media-amazon.com/images/I/61uTcT5KkoL._SL1499_.jpg" alt="My Unicorn Fairy World journal cover">
-        <h3>My Unicorn Fairy World — Unicorn Journal</h3>
+        <h4>My Unicorn Fairy World — Unicorn Journal</h4>
         <p>Magical pink notebook for girls and teens who love unicorns, rainbows and fairy dreams.</p>
+        <span class="tag-pill">Unicorn & fantasy lovers</span>
         <a class="buy-btn" href="https://amzn.to/43HXjd7" target="_blank" rel="noopener noreferrer">View on Amazon</a>
       </article>
 
     </div>
   </section>
 
-  <!-- GUIDES / MAIN ARTICLE -->
+  <!-- GUIDES SECTION: MAIN ARTICLE + MINI GUIDES -->
   <section id="guides" class="info-section">
-    <div class="info-card">
-      <h3>The Gift of Planning: How Beautiful Stationery Transforms Daily Life</h3>
-      <p>
-        A planner is more than paper. It is a quiet table where your day can sit down, slow down and make sense.
-        Whether you are a parent running a busy household, a student juggling classes, a professional managing
-        projects, or a grandparent who loves sending thoughtful gifts, a calm planner page can become a tiny luxury
-        that supports everyone you love.
-      </p>
+    <div class="guides-layout">
+      <!-- MAIN GUIDE -->
+      <article class="guide-main">
+        <h2>Beautiful Planning Guides for Real Life (Kids, Teens, Adults & Families)</h2>
 
-      <h4>Benefits — Why a soft, structured planner works for busy, scattered minds</h4>
-      <p><strong>1. It shrinks the day into clear boxes.</strong> Big, messy to-do lists can feel impossible. When your planner shows only a few priorities, a small habit tracker and a line for gratitude, the day becomes less frightening and more doable.</p>
-      <p><strong>2. It replaces guilt with information.</strong> Empty boxes do not mean failure. They tell you how much energy you really had. Over time you learn your own rhythm instead of fighting it.</p>
-      <p><strong>3. It creates a gentle ritual for kids and adults.</strong> Sitting together for five minutes each morning — parent with child, teen with their own planner, or even grandparent with a cup of tea — turns planning into a cozy daily habit instead of a punishment.</p>
-      <p><strong>4. It turns gifts into support, not pressure.</strong> A premium planner with calm colors and kind prompts feels like a quiet “I believe in you” — perfect for holidays, new school years and new jobs.</p>
+        <p>
+          A planner is more than paper. It is a quiet table where your day can sit down, slow down and make sense.
+          Whether you are a parent running a busy household, a student juggling classes, a gamer trying to balance
+          screens and sleep, or a grandparent who loves sending thoughtful gifts, a calm planner page can become a
+          tiny daily ritual that supports everyone you love.
+        </p>
 
-      <h4>Steps — A simple evening routine for using any Lovely Planners Studio book</h4>
-      <p><strong>Step 1 – Choose your “big three”.</strong> On each daily page, circle or highlight only three must-do tasks. These are your wins. Everything else is a bonus.</p>
-      <p><strong>Step 2 – Block tiny focus times.</strong> Use 10–25 minute blocks instead of long marathons. Write one block next to each big task. Short bursts are kinder for busy brains.</p>
-      <p><strong>Step 3 – Add one kind habit.</strong> In the habit tracker, choose just one or two habits: drink water, stretch, read 5 minutes, message a friend. Small habits grow quietly.</p>
-      <p><strong>Step 4 – Capture the noise, not only the tasks.</strong> Use any notes or doodle space in your planner as a “brain unload” zone. Jot ideas, worries or reminders so your mind does not have to hold everything alone.</p>
-      <p><strong>Step 5 – Close the day with one line of gratitude.</strong> Before sleep, write one sentence: something you learned, someone who was kind, or any tiny moment of joy. This teaches your brain to notice progress, not just problems.</p>
+        <h3>Benefits — Why a soft, structured planner works for busy, scattered minds</h3>
 
-      <h4>Tools — Planner styles that fit different people</h4>
-      <p>
-        Different seasons of life need different layouts. That is why the Lovely Planners Studio collection offers several styles,
-        all with calm, gift-ready covers:
-      </p>
-      <ul>
-        <li><strong>For calm &amp; sensitive planners:</strong> <a href="https://amzn.to/4pkkVNm" target="_blank" rel="noopener noreferrer">Serene Days 2026</a> — soft colors, gentle prompts and space to breathe.</li>
-        <li><strong>For gamers &amp; teens:</strong> <a href="https://amzn.to/3LMVSEd" target="_blank" rel="noopener noreferrer">Level Up 2026</a> and <a href="https://amzn.to/4poJgli" target="_blank" rel="noopener noreferrer">Stay in the Game</a> — tasks become quests and levels.</li>
-        <li><strong>For kids &amp; kawaii lovers:</strong> strawberry and unicorn journals like <a href="https://amzn.to/4oNqwf3" target="_blank" rel="noopener noreferrer">Sweet Strawberry Journal</a> and <a href="https://amzn.to/43HXjd7" target="_blank" rel="noopener noreferrer">My Unicorn Fairy World</a>.</li>
-        <li><strong>For minimalists &amp; professionals:</strong> clean layouts such as <a href="https://amzn.to/4i9PfYL" target="_blank" rel="noopener noreferrer">Daily To-Do Planner 2026</a> and <a href="https://amzn.to/4i6f6Ay" target="_blank" rel="noopener noreferrer">Golden Year 2026</a>.</li>
-      </ul>
-      <p>
-        Choose the design that feels like a friend, not a judge. When the page feels welcoming, people are more likely to return
-        to it — and that quiet consistency is what slowly transforms chaotic weeks into calm, elegant routines.
-      </p>
+        <p><strong>1. It shrinks the day into clear boxes.</strong><br>
+          Big, messy to-do lists can feel impossible. When your planner shows only a few priorities, a small habit
+          tracker and a line for gratitude, the day becomes less frightening and more doable.
+        </p>
 
-      <div class="mini-guides">
-        <h4>Mini Guides for Every Season of Life</h4>
+        <p><strong>2. It replaces guilt with information.</strong><br>
+          Empty boxes do not mean failure. They tell you how much energy you really had. Over time you learn your
+          own rhythm instead of fighting it.
+        </p>
+
+        <p><strong>3. It creates a gentle ritual for kids and adults.</strong><br>
+          Sitting together for five minutes each morning — parent with child, teen with their own planner, or
+          even a grandparent with a cup of tea — turns planning into a cozy daily habit instead of a punishment.
+        </p>
+
+        <p><strong>4. It turns gifts into support, not pressure.</strong><br>
+          A premium planner with calm colors and kind prompts feels like a quiet “I believe in you” — perfect
+          for holidays, new school years and new jobs.
+        </p>
+
+        <h3>Steps — A simple evening routine for using any Lovely Planners Studio book</h3>
+
+        <p><strong>Step 1 – Choose your “big three”.</strong><br>
+          On each daily page, circle or highlight only three must-do tasks. These are your wins. Everything
+          else is a bonus.
+        </p>
+
+        <p><strong>Step 2 – Block tiny focus times.</strong><br>
+          Use 10–25 minute blocks instead of long marathons. Write one block next to each big task.
+          Short bursts are kinder for busy brains.
+        </p>
+
+        <p><strong>Step 3 – Add one kind habit.</strong><br>
+          In the habit tracker, choose just one or two habits: drink water, stretch, read 5 minutes, message
+          a friend. Small habits grow quietly.
+        </p>
+
+        <p><strong>Step 4 – Capture the noise, not only the tasks.</strong><br>
+          Use any notes or doodle space in your planner as a “brain unload” zone. Jot ideas, worries or reminders
+          so your mind does not have to hold everything alone.
+        </p>
+
+        <p><strong>Step 5 – Close the day with one line of gratitude.</strong><br>
+          Before sleep, write one sentence: something you learned, someone who was kind, or any tiny moment
+          of joy. This teaches your brain to notice progress, not just problems.
+        </p>
+
+        <h3>Tools — Planner styles that fit different people</h3>
+
+        <p>
+          Different seasons of life need different layouts. That is why the Lovely Planners Studio collection offers
+          several styles, all with calm, gift-ready covers:
+        </p>
+
+        <ul>
+          <li><strong>For calm & sensitive planners:</strong> <a href="https://amzn.to/4pkkVNm" target="_blank" class="inline-link">Serene Days 2026</a> — soft colors, gentle prompts and space to breathe.</li>
+          <li><strong>For gamers & teens:</strong> <a href="https://amzn.to/3LMVSEd" target="_blank" class="inline-link">Level Up 2026</a> and <a href="https://amzn.to/4poJgli" target="_blank" class="inline-link">Stay in the Game</a> — tasks become quests and levels.</li>
+          <li><strong>For kids & kawaii lovers:</strong> strawberry and unicorn journals like <a href="https://amzn.to/4oNqwf3" target="_blank" class="inline-link">Sweet Strawberry Journal</a> and <a href="https://amzn.to/43HXjd7" target="_blank" class="inline-link">My Unicorn Fairy World</a>.</li>
+          <li><strong>For minimalists & professionals:</strong> clean layouts such as <a href="https://amzn.to/4i9PfYL" target="_blank" class="inline-link">Daily To-Do Planner 2026</a> and <a href="https://amzn.to/4i6f6Ay" target="_blank" class="inline-link">Golden Year 2026</a>.</li>
+        </ul>
+
+        <p>
+          Choose the design that feels like a friend, not a judge. When the page feels welcoming, people are more
+          likely to return to it — and that quiet consistency is what slowly transforms chaotic weeks into calm,
+          elegant routines.
+        </p>
+
+        <h3>Mini Guides for Every Season of Life</h3>
         <ul>
           <li><strong>Gift Guide:</strong> Use themed journals (strawberry, unicorn, gamer) as thoughtful birthday and holiday gifts for kids and teens who love stationery.</li>
           <li><strong>Student Routine:</strong> Pair a daily planner with a weekly review night to keep assignments, exams and hobbies visible but not overwhelming.</li>
@@ -756,18 +841,42 @@
           <li><strong>Screen-Smart Evenings:</strong> Encourage kids and teens to close their day in a paper journal before opening their favorite game or show.</li>
           <li><strong>Holiday Reset:</strong> Use a fresh planner page on the first day of each month as a mini “New Year”, instead of waiting for January.</li>
           <li><strong>Grandparent Letters:</strong> Gift journals that kids can fill, then send photos of their pages to grandparents as a sweet update from their day.</li>
-          <li><strong>Work &amp; Life Balance:</strong> Divide your daily page into “Work”, “Home” and “Me” so no area fully disappears during busy weeks.</li>
+          <li><strong>Work & Life Balance:</strong> Divide your daily page into “Work”, “Home” and “Me” so no area fully disappears during busy weeks.</li>
           <li><strong>Travel Memories:</strong> Take a compact journal on trips; write one line per day so the journey stays alive long after the photos are saved.</li>
           <li><strong>Kind Self-Reflection:</strong> Once a week, use a notes page to answer three questions: “What worked?”, “What felt heavy?” and “What can be lighter next week?”.</li>
         </ul>
-      </div>
+      </article>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <h4>Quick Links<span class="badge">New</span></h4>
+        <ul>
+          <li><a class="inline-link" href="#books">See all planners & journals</a></li>
+          <li><a class="inline-link" href="#guides">Read the main guide</a></li>
+          <li><a class="inline-link" href="#contact">Contact & collabs</a></li>
+        </ul>
+
+        <h4>Find a book by keyword</h4>
+        <input id="siteSearch" type="search" placeholder="Search in page (e.g. gamer, strawberry, unicorn)">
+        <button type="button" onclick="doSearch()">Search in page</button>
+
+        <div class="ad-box">
+          Ad spot (optional) — you can place a sidebar AdSense unit here later.
+        </div>
+
+        <h4 style="margin-top:12px;">Social</h4>
+        <p class="small">
+          Instagram: <a href="https://www.instagram.com/lovelyplannersstudio" target="_blank" class="inline-link">@lovelyplannersstudio</a><br>
+          Pinterest: <a href="https://www.pinterest.com/LovelyPlannersStudio" target="_blank" class="inline-link">LovelyPlannersStudio</a>
+        </p>
+      </aside>
     </div>
   </section>
 
-  <!-- PLANNING TIPS -->
+  <!-- GENTLE PLANNING TIPS (ADHD-FRIENDLY BUT NEUTRAL) -->
   <section id="adhd" class="info-section">
+    <h3 class="section-title">💛 Gentle Planning Tips for Busy, Distracted Minds</h3>
     <div class="info-card">
-      <h3>💛 Gentle Planning Tips for Busy, Distracted Minds</h3>
       <p><strong>1. Three wins only:</strong> choose just three “must-do” tasks per day instead of a huge list. Finishing them is already success.</p>
       <p><strong>2. Short focus bursts:</strong> 10–20 minute sessions often work better than trying to force two hours of concentration.</p>
       <p><strong>3. One highlight color:</strong> use a single color to mark your true priorities so your eyes know instantly where to land.</p>
@@ -778,8 +887,8 @@
 
   <!-- ABOUT -->
   <section id="about" class="info-section">
+    <h3 class="section-title">About Lovely Planners Studio</h3>
     <div class="info-card">
-      <h3>About Lovely Planners Studio</h3>
       <p>
         Lovely Planners Studio is a small, independent studio dedicated to creating premium paper tools that feel both
         beautiful and practical. Every layout is designed to be calm, clear and welcoming for a wide range of people:
@@ -787,37 +896,37 @@
         to gather their days.
       </p>
       <p>
-        Our philosophy is simple: <strong>planning should feel like self-care, not self-criticism.</strong>
-        That is why our pages focus on small steps, gentle wording and plenty of white space. We believe that when a planner
-        feels good to open, it is much easier to build habits that last.
+        Our philosophy is simple: <strong>planning should feel like self-care, not self-criticism.</strong> That is why our pages
+        focus on small steps, gentle wording and plenty of white space. We believe that when a planner feels good to open,
+        it is much easier to build habits that last.
       </p>
       <p>
-        All books are printed and delivered through Amazon, making it easy to order from many countries and to send planners
-        as gifts across the world.
+        All books are printed and delivered through Amazon, making it easy to order from many countries and to send
+        planners as gifts across the world.
       </p>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="info-section">
+    <h3 class="section-title">📬 Contact & Partnerships</h3>
     <div class="info-card">
-      <h3>📬 Contact &amp; Partnerships</h3>
       <p>For questions, collaborations or bulk gifting ideas, you are welcome to reach out:</p>
       <p>Email: <a href="mailto:imata.space@gmail.com">imata.space@gmail.com</a></p>
       <p>Instagram: <a href="https://www.instagram.com/lovelyplannersstudio" target="_blank">@lovelyplannersstudio</a></p>
       <p>Pinterest: <a href="https://www.pinterest.com/LovelyPlannersStudio" target="_blank">LovelyPlannersStudio</a></p>
-      <p class="section-sub">Affiliate disclosure: links to Amazon are affiliate links. We may earn a small commission at no extra cost to you.</p>
+      <p class="small">Affiliate disclosure: links to Amazon are affiliate links. We may earn a small commission at no extra cost to you.</p>
     </div>
   </section>
 
   <!-- PRIVACY -->
   <section id="privacy" class="info-section">
+    <h3 class="section-title">Privacy</h3>
     <div class="info-card">
-      <h3>Privacy</h3>
       <p>
-        This website does not collect personal information unless you choose to contact us by email.
-        Any analytics or advertising tools used on this site may collect anonymous usage data to help us understand visits
-        and improve the experience.
+        This website does not collect personal information unless you choose to contact us by email. Any analytics or
+        advertising tools used on this site may collect anonymous usage data to help us understand visits and improve
+        the experience.
       </p>
       <p>
         If you click on a book link, you will be redirected to Amazon or another retailer, where their own privacy policy
@@ -828,21 +937,20 @@
 
   <!-- TERMS -->
   <section id="terms" class="info-section">
+    <h3 class="section-title">Terms & Disclaimer</h3>
     <div class="info-card">
-      <h3>Terms &amp; Disclaimer</h3>
       <p>
         All purchases are handled by Amazon or other retailers. Please follow the policies of the retailer for shipping,
         payment and returns. Lovely Planners Studio does not process payments directly through this website.
       </p>
       <p>
-        Our planners and journals are lifestyle tools designed to support organization, reflection and motivation.
-        They are not a replacement for professional medical, psychological or educational advice. For any health-related
+        Our planners and journals are lifestyle tools designed to support organization, reflection and motivation. They
+        are not a replacement for professional medical, psychological or educational advice. For any health-related
         questions, please speak with a qualified professional.
       </p>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div>© 2025 Lovely Planners Studio — All Rights Reserved</div>
     <div class="footer-links" style="margin-top:6px;">
@@ -857,6 +965,40 @@
   </footer>
 
 </main>
+
+<!-- SMALL JS: IN-PAGE SEARCH SCROLL HIGHLIGHT -->
+<script>
+  function doSearch(){
+    const q = (document.getElementById('siteSearch').value || '').toLowerCase().trim();
+    if(!q){ alert('Type a keyword like "gamer", "strawberry", "unicorn" or "planner".'); return; }
+    const items = document.querySelectorAll('.book-card');
+    let found = 0;
+    items.forEach(it=>{
+      const txt = (it.innerText || '').toLowerCase();
+      if(txt.includes(q)){
+        it.style.outline = '2px solid #22c55e';
+        it.scrollIntoView({behavior:'smooth',block:'center'});
+        found++;
+      } else {
+        it.style.outline = '';
+      }
+    });
+    if(found===0) alert('No results found in the books section. Try another word.');
+  }
+
+  // smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      const href = a.getAttribute('href');
+      if(href && href.startsWith('#')){
+        e.preventDefault();
+        const id = href.slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
