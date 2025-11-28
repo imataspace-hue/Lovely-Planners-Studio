@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main page -->
+  <url>
+    <loc>https://www.lovelyplannersstudio.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Articles -->
+  <url><loc>https://www.lovelyplannersstudio.com/article-1.html</loc></url>
+  <url><loc>https://www.lovelyplannersstudio.com/article-2.html</loc></url>
+  <url><loc>https://www.lovelyplannersstudio.com/article-3.html</loc></url>
+  <url><loc>https://www.lovelyplannersstudio.com/article-4.html</loc></url>
+  <url><loc>https://www.lovelyplannersstudio.com/article-5.html</loc></url>
+  <url><loc>https://www.lovelyplannersstudio.com/article-6.html</loc></url>
+  <url><loc>https://www.lovelyplannersstudio.com/article-7.html</loc></url>
+  <url><loc>https://www.lovelyplannersstudio.com/article-8.html</loc></url>
+  <url><loc>https://www.lovelyplannersstudio.com/article-9.html</loc></url>
+  <url><loc>https://www.lovelyplannersstudio.com/article-10.html</loc></url>
+
+</urlset>
