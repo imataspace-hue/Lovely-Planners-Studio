@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Happy Planner — Fun, Customizable Disc-Bound Planner | Lovely Planners Studio</title>
+
+  <meta name="description"
+        content="The Happy Planner is a fun, colorful disc-bound planner system with interchangeable covers, pages and inserts — perfect for creative planners, teachers, busy moms and sticker lovers in the US & Canada." />
+  <meta name="keywords"
+        content="The Happy Planner, Happy Planner, disc-bound planner, customizable planner, planner with stickers, planner for women, teacher planner, creative planner, decorative planner, colorful planner" />
+  <link rel="canonical" href="https://www.lovelyplannersstudio.com/the-happy-planner.html" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product" />
+  <meta property="og:site_name" content="Lovely Planners Studio" />
+  <meta property="og:title" content="The Happy Planner — Fun, Customizable Disc-Bound Planner" />
+  <meta property="og:description"
+        content="A fun, colorful disc-bound planner system with interchangeable covers and pages — loved by creative planners, teachers and busy moms." />
+  <meta property="og:url" content="https://www.lovelyplannersstudio.com/the-happy-planner.html" />
+  <meta property="og:image"
+        content="https://m.media-amazon.com/images/I/71PLKOZJk9L._AC_SL1500_.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Happy Planner — Fun, Customizable Planner" />
+  <meta name="twitter:description"
+        content="A colorful, customizable disc-bound planner with stickers and inserts — perfect for creative, decorative planning." />
+  <meta name="twitter:image"
+        content="https://m.media-amazon.com/images/I/71PLKOZJk9L._AC_SL1500_.jpg" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://m.media-amazon.com" crossorigin />
+  <link rel="preconnect" href="https://amzn.to" crossorigin />
+
+  <!-- Styles (نفس روح باقي الصفحات لكن بأجواء مفرحة أكثر 🎀) -->
+  <style>
+    :root {
+      --bg: #fff7fb;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --accent: #ec4899;
+      --accent2: #f97316;
+      --border: #e5e7eb;
+      --radius: 16px;
+      --shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+      --maxw: 1080px;
+      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent2);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: linear-gradient(90deg, #be123c, #f97316);
+      color: #fff;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.45);
+    }
+
+    .nav {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      object-fit: cover;
+      background: #fff;
+      box-shadow: 0 0 0 2px rgba(252, 165, 165, 0.9);
+    }
+
+    .brand-text-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .brand-text-sub {
+      font-size: 11px;
+      opacity: 0.9;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      font-size: 13px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: #ffe4e6;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(254, 202, 202, 0.6);
+      backdrop-filter: blur(4px);
+      background: rgba(15, 23, 42, 0.35);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    main {
+      max-width: var(--maxw);
+      margin: 24px auto 60px;
+      padding: 0 18px 40px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 30px;
+      align-items: center;
+      background: radial-gradient(circle at top left, #fce7f3, #fff7ed);
+      border-radius: 28px;
+      padding: 24px 24px 22px;
+      box-shadow: var(--shadow);
+      margin-bottom: 30px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(252, 211, 77, 0.18);
+      color: #92400e;
+      border: 1px solid rgba(251, 191, 36, 0.8);
+      margin-bottom: 8px;
+    }
+
+    .hero h1 {
+      font-size: 26px;
+      margin: 0 0 10px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .hero-list {
+      font-size: 14px;
+      margin: 0 0 16px;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .hero-list li {
+      margin-bottom: 4px;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #f97316, #ec4899);
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(249, 115, 22, 0.42);
+    }
+
+    .btn-primary span.icon {
+      font-size: 16px;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(248, 113, 113, 0.8);
+      background: rgba(255, 255, 255, 0.9);
+      color: #b91c1c;
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .hero-note {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero-img-wrap {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 10px;
+    }
+
+    .hero-main {
+      grid-row: 1 / span 2;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.35);
+      background: #fff1f2;
+    }
+
+    .hero-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-thumb {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.18);
+      background: #fff;
+    }
+
+    .hero-thumb img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .section {
+      margin-top: 30px;
+      background: rgba(255, 255, 255, 0.97);
+      border-radius: 24px;
+      padding: 22px 18px 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .section h3 {
+      font-size: 17px;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    .section p {
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(226, 232, 240, 0.95);
+    }
+
+    .pill {
+      display: inline-flex;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      background: rgba(254, 226, 226, 0.96);
+      color: #b91c1c;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 6px;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    li + li {
+      margin-top: 4px;
+    }
+
+    .highlight {
+      background: #fff7ed;
+      border-radius: 12px;
+      padding: 9px 10px;
+      border: 1px dashed rgba(248, 153, 102, 0.9);
+      font-size: 13px;
+      margin-top: 8px;
+      color: #9a3412;
+    }
+
+    .pros-cons {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 18px;
+      margin-top: 12px;
+    }
+
+    .pros-cons h3 {
+      margin-top: 0;
+    }
+
+    .faq-item {
+      border-top: 1px solid rgba(226, 232, 240, 0.9);
+      padding-top: 10px;
+      margin-top: 10px;
+    }
+
+    .faq-item h3 {
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .back-home {
+      margin-top: 16px;
+      font-size: 13px;
+    }
+
+    .inside-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .inside-grid img {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid rgba(229, 231, 235, 0.95);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.18);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 16px 28px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 860px) {
+      header { position: static; }
+      .hero { grid-template-columns: minmax(0, 1fr); }
+      .hero-img-wrap { order: -1; }
+      .two-col,
+      .pros-cons,
+      .inside-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <div class="brand-logo"></div>
+      <div>
+        <div class="brand-text-title">Lovely Planners Studio</div>
+        <div class="brand-text-sub">Planners • Journals • Calm Productivity Tools</div>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html#books">Books</a>
+      <a href="index.html#guides">Guides</a>
+      <a href="index.html#articles">Articles</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div>
+      <div class="hero-pill">
+        🎀 Fun, Customizable Disc-Bound Planner System
+      </div>
+      <h1>The Happy Planner — Planning That Feels Playful & Creative</h1>
+      <p class="hero-sub">
+        The Happy Planner is a colorful, disc-bound planner system with interchangeable covers,
+        pages and inserts — perfect for creative planners, teachers, busy moms and sticker lovers
+        who want planning to feel fun again.
+      </p>
+
+      <ul class="hero-list">
+        <li>Disc-bound system — add, remove and rearrange pages easily.</li>
+        <li>Colorful, decorative layouts that are perfect for stickers and washi tape.</li>
+        <li>Great for home, school, work and family life.</li>
+        <li>Beloved by US planner communities, crafters and creatives.</li>
+      </ul>
+
+      <div class="hero-cta-row">
+        <a class="btn-primary"
+           href="https://amzn.to/3Xyowvq"
+           target="_blank" rel="nofollow noopener sponsored">
+          <span class="icon">🛒</span>
+          <span>Buy The Happy Planner on Amazon</span>
+        </a>
+        <a class="btn-secondary" href="#inside">
+          👀 See inside & layouts
+        </a>
+      </div>
+      <div class="hero-note">
+        Amazon affiliate link — price stays the same for you, and you support Lovely Planners Studio.
+      </div>
+    </div>
+
+    <div class="hero-img-wrap">
+      <div class="hero-main">
+        <img src="https://m.media-amazon.com/images/I/71PLKOZJk9L._AC_SL1500_.jpg"
+             alt="The Happy Planner cover with colorful discs and stickers" />
+      </div>
+      <div class="hero-thumb">
+        <img src="https://m.media-amazon.com/images/I/71F1Q+eAxUL._AC_SL1500_.jpg"
+             alt="The Happy Planner weekly layout with decorative stickers" />
+      </div>
+      <div class="hero-thumb">
+        <img src="https://m.media-amazon.com/images/I/715KF0NRmoL._AC_SL1500_.jpg"
+             alt="The Happy Planner open on a desk with accessories and pens" />
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="section">
+    <h2>Who is The Happy Planner perfect for?</h2>
+    <div class="two-col">
+      <div class="card">
+        <span class="pill">For creative, visual planners</span>
+        <p>
+          The Happy Planner shines when planning is also a creative outlet.
+          It’s especially loved by:
+        </p>
+        <ul>
+          <li><strong>Sticker & stationery lovers</strong> who enjoy decorating their pages.</li>
+          <li><strong>Teachers</strong> who want colorful lesson planning and schedule tracking.</li>
+          <li><strong>Busy moms</strong> managing kids’ activities, meals, appointments and home life.</li>
+          <li><strong>Crafters & scrapbook fans</strong> who like memory-keeping in their planner.</li>
+          <li><strong>Anyone who wants planning to feel fun, not rigid.</strong></li>
+        </ul>
+        <div class="highlight">
+          If you love the idea of your planner being part calendar, part scrapbook, part creative journal —
+          The Happy Planner is a great match.
+        </div>
+      </div>
+      <div class="card">
+        <span class="pill">Why people in the US & Canada love it</span>
+        <ul>
+          <li><strong>Disc-bound system</strong> that lets you move pages, add inserts and customize layouts.</li>
+          <li><strong>Huge community</strong> of Happy Planner fans with ideas, spreads and inspiration online.</li>
+          <li><strong>Lots of accessories</strong> — sticker books, extension packs, dashboards and more.</li>
+          <li><strong>Bright, joyful designs</strong> that make you excited to open your planner.</li>
+          <li><strong>Flexible enough</strong> for home, school, work or personal projects.</li>
+        </ul>
+        <p class="muted">
+          Many people start with one Happy Planner and then build a full system around it:
+          adding inserts for fitness, budgeting, meal planning and more.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIDE THE PLANNER -->
+  <section class="section" id="inside">
+    <h2>What’s inside The Happy Planner?</h2>
+    <div class="two-col">
+      <div class="card">
+        <h3>1. Monthly & weekly layouts</h3>
+        <ul>
+          <li>Monthly calendar spreads for big-picture planning.</li>
+          <li>Weekly layouts (often vertical or horizontal columns) perfect for stickers and decor.</li>
+          <li>Space for tasks, reminders, events and notes.</li>
+        </ul>
+
+        <h3>2. Disc-bound flexibility</h3>
+        <ul>
+          <li>Pages are held by discs — you can pop them in and out easily.</li>
+          <li>Rearrange sections or add extension packs for different areas of life.</li>
+          <li>Upgrade discs or covers as your style evolves.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>3. Extra sections & dashboards</h3>
+        <ul>
+          <li>Depending on the edition, you may get note pages, habit trackers or goal sections.</li>
+          <li>Dashboards and inserts to help you organize projects or routines.</li>
+          <li>Plenty of space to mix practical planning with creativity.</li>
+        </ul>
+
+        <h3>4. Designed for decoration & joy</h3>
+        <ul>
+          <li>Paper and layouts designed to work well with stickers and pens.</li>
+          <li>Encouraging quotes, colors and motifs throughout the planner.</li>
+        </ul>
+        <div class="highlight">
+          The Happy Planner works best when you let it be yours:
+          some days are super decorative, other days are simple lists — it all counts.
+        </div>
+      </div>
+    </div>
+
+    <div class="inside-grid">
+      <img src="https://m.media-amazon.com/images/I/71Nv9O9r+VL._AC_SL1500_.jpg"
+           alt="The Happy Planner decorated spread with colorful stickers and writing" />
+      <img src="https://m.media-amazon.com/images/I/71TXIOPh38L._AC_SL1500_.jpg"
+           alt="The Happy Planner discs, cover and accessories on a planning desk" />
+    </div>
+  </section>
+
+  <!-- PROS & CONS -->
+  <section class="section">
+    <h2>Is The Happy Planner right for you?</h2>
+    <div class="pros-cons">
+      <div class="card">
+        <h3>👍 Strong points</h3>
+        <ul>
+          <li>Highly customizable disc-bound system.</li>
+          <li>Perfect for creative and decorative planning styles.</li>
+          <li>Lots of accessories and community inspiration available.</li>
+          <li>Bright, joyful designs that help planning feel less like a chore.</li>
+          <li>Good option for teachers, moms and multi-tasking planners.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Things to keep in mind</h3>
+        <ul>
+          <li>If you prefer ultra-minimal layouts, it may feel too decorative.</li>
+          <li>You might want to invest in extra inserts or stickers over time.</li>
+          <li>Because it’s customizable, you may need a bit of time to find your perfect setup.</li>
+        </ul>
+        <div class="highlight">
+          If you’ve ever wished planning could feel like a hobby, not just a responsibility,
+          The Happy Planner can make that happen.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO USE -->
+  <section class="section">
+    <h2>How to use The Happy Planner in a fun, sustainable way</h2>
+    <p>
+      You don’t need to decorate every page to enjoy The Happy Planner.
+      Here’s a gentle way to make it work for real life:
+    </p>
+    <ul>
+      <li><strong>Once a month:</strong> Fill your monthly spread with big events, appointments and deadlines.</li>
+      <li><strong>Once a week:</strong> Set up your weekly layout — write main tasks, then add a few stickers if you like.</li>
+      <li><strong>Each day:</strong> Add to-dos, notes and short memories of the day.</li>
+      <li><strong>When you have time:</strong> Decorate more, add photos, washi or journaling.</li>
+      <li><strong>As life changes:</strong> Add sections (fitness, budget, meals, etc.) using extension packs.</li>
+    </ul>
+    <p class="muted">
+      Planning with joy is easier to stick with —
+      and The Happy Planner is designed to make opening your planner feel like a small celebration.
+    </p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <h2>The Happy Planner — Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>Is The Happy Planner dated or undated?</h3>
+      <p>
+        The Happy Planner comes in both dated and undated versions.
+        Always check the specific listing on Amazon to see which edition you’re getting.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I add and remove pages?</h3>
+      <p>
+        Yes. That’s one of the main benefits of the disc-bound system —
+        you can pop pages in and out, add inserts and rearrange sections as needed.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is it good for beginners?</h3>
+      <p>
+        Absolutely. You can start simple with pen-only spreads,
+        then slowly add stickers or extra inserts once you’re comfortable.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does it ship to the US & Canada?</h3>
+      <p>
+        Yes, The Happy Planner is widely available on Amazon with shipping options
+        for the United States and Canada. See the Amazon page for current delivery details and designs.
+      </p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section">
+    <h2>Ready to make planning the happiest part of your week?</h2>
+    <p>
+      If you want a planner that brings color, creativity and flexibility into your routine,
+      The Happy Planner is a joyful choice. Turn your to-dos into something you actually
+      look forward to opening.
+    </p>
+    <div class="hero-cta-row">
+      <a class="btn-primary"
+         href="https://amzn.to/3Xyowvq"
+         target="_blank" rel="nofollow noopener sponsored">
+        <span class="icon">✨</span>
+        <span>Get The Happy Planner on Amazon</span>
+      </a>
+      <a class="btn-secondary" href="index.html#books">
+        ← Browse more planners
+      </a>
+    </div>
+    <p class="muted" style="margin-top:10px">
+      Affiliate disclosure: Links to Amazon are affiliate links; we may earn a small commission at no extra cost to you.
+    </p>
+
+    <div class="back-home">
+      ← Back to <a href="index.html">Lovely Planners Studio home page</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Lovely Planners Studio — All Rights Reserved
+</footer>
+
+</body>
+</html>
