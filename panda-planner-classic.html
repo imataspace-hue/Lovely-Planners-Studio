@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Panda Planner Classic — Science-Based Happiness & Productivity Planner | Lovely Planners Studio</title>
+
+  <meta name="description"
+        content="Panda Planner Classic is a science-based daily productivity and happiness planner designed to boost focus, gratitude and positive habits — loved by students, professionals and busy adults in the US & Canada." />
+  <meta name="keywords"
+        content="Panda Planner Classic, Panda Planner, productivity planner, daily planner, gratitude journal, happiness planner, planner for burnout, ADHD planner, focus planner, planner for mental clarity" />
+  <link rel="canonical" href="https://www.lovelyplannersstudio.com/panda-planner-classic.html" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product" />
+  <meta property="og:site_name" content="Lovely Planners Studio" />
+  <meta property="og:title" content="Panda Planner Classic — Science-Based Productivity & Happiness Planner" />
+  <meta property="og:description"
+        content="A neuroscience-inspired planner that blends productivity, gratitude and reflection to support focus, motivation and emotional wellbeing." />
+  <meta property="og:url" content="https://www.lovelyplannersstudio.com/panda-planner-classic.html" />
+  <meta property="og:image"
+        content="https://m.media-amazon.com/images/I/71OmerhVNSL._AC_SL1080_.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Panda Planner Classic — Daily Happiness & Focus Planner" />
+  <meta name="twitter:description"
+        content="A daily productivity planner focused on gratitude, reflection and small wins — perfect for busy, overwhelmed or distracted minds." />
+  <meta name="twitter:image"
+        content="https://m.media-amazon.com/images/I/71OmerhVNSL._AC_SL1080_.jpg" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://m.media-amazon.com" crossorigin />
+  <link rel="preconnect" href="https://amzn.to" crossorigin />
+
+  <!-- Styles (نفس الروح لكن بألوان باندا خضراء هادئة) -->
+  <style>
+    :root {
+      --bg: #f4f7f5;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --accent: #16a34a;
+      --accent2: #0f766e;
+      --border: #e5e7eb;
+      --radius: 16px;
+      --shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+      --maxw: 1080px;
+      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent2);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: linear-gradient(90deg, #022c22, #047857);
+      color: #fff;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.45);
+    }
+
+    .nav {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      object-fit: cover;
+      background: #fff;
+      box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.85);
+    }
+
+    .brand-text-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .brand-text-sub {
+      font-size: 11px;
+      opacity: 0.9;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      font-size: 13px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: #dcfce7;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(187, 247, 208, 0.4);
+      backdrop-filter: blur(4px);
+      background: rgba(6, 95, 70, 0.35);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    main {
+      max-width: var(--maxw);
+      margin: 24px auto 60px;
+      padding: 0 18px 40px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 30px;
+      align-items: center;
+      background: radial-gradient(circle at top left, #dcfce7, #ecfdf5);
+      border-radius: 28px;
+      padding: 24px 24px 22px;
+      box-shadow: var(--shadow);
+      margin-bottom: 30px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(74, 222, 128, 0.16);
+      color: #065f46;
+      border: 1px solid rgba(34, 197, 94, 0.6);
+      margin-bottom: 8px;
+    }
+
+    .hero h1 {
+      font-size: 26px;
+      margin: 0 0 10px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .hero-list {
+      font-size: 14px;
+      margin: 0 0 16px;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .hero-list li {
+      margin-bottom: 4px;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #16a34a, #0f766e);
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(22, 163, 74, 0.42);
+    }
+
+    .btn-primary span.icon {
+      font-size: 16px;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(16, 185, 129, 0.7);
+      background: rgba(255, 255, 255, 0.9);
+      color: #064e3b;
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .hero-note {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero-img-wrap {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 10px;
+    }
+
+    .hero-main {
+      grid-row: 1 / span 2;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.35);
+      background: #ecfdf3;
+    }
+
+    .hero-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-thumb {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.18);
+      background: #fff;
+    }
+
+    .hero-thumb img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .section {
+      margin-top: 30px;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 24px;
+      padding: 22px 18px 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .section h3 {
+      font-size: 17px;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    .section p {
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(226, 232, 240, 0.95);
+    }
+
+    .pill {
+      display: inline-flex;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      background: rgba(220, 252, 231, 0.9);
+      color: #166534;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 6px;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    li + li {
+      margin-top: 4px;
+    }
+
+    .highlight {
+      background: #ecfdf5;
+      border-radius: 12px;
+      padding: 9px 10px;
+      border: 1px dashed rgba(45, 212, 191, 0.7);
+      font-size: 13px;
+      margin-top: 8px;
+      color: #0f766e;
+    }
+
+    .pros-cons {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 18px;
+      margin-top: 12px;
+    }
+
+    .pros-cons h3 {
+      margin-top: 0;
+    }
+
+    .faq-item {
+      border-top: 1px solid rgba(226, 232, 240, 0.9);
+      padding-top: 10px;
+      margin-top: 10px;
+    }
+
+    .faq-item h3 {
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .back-home {
+      margin-top: 16px;
+      font-size: 13px;
+    }
+
+    .inside-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .inside-grid img {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid rgba(229, 231, 235, 0.95);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.18);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 16px 28px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 860px) {
+      header { position: static; }
+      .hero { grid-template-columns: minmax(0, 1fr); }
+      .hero-img-wrap { order: -1; }
+      .two-col,
+      .pros-cons,
+      .inside-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <div class="brand-logo"></div>
+      <div>
+        <div class="brand-text-title">Lovely Planners Studio</div>
+        <div class="brand-text-sub">Planners • Journals • Calm Productivity Tools</div>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html#books">Books</a>
+      <a href="index.html#guides">Guides</a>
+      <a href="index.html#articles">Articles</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div>
+      <div class="hero-pill">
+        🐼 Science-Based Daily Planner for Focus & Happiness
+      </div>
+      <h1>Panda Planner Classic — Daily Productivity & Happiness Planner</h1>
+      <p class="hero-sub">
+        A neuroscience-inspired planner designed to help you focus, feel grateful and move through your days
+        with more clarity and less chaos — especially when life feels busy or overwhelming.
+      </p>
+
+      <ul class="hero-list">
+        <li>Daily pages that blend tasks, priorities, gratitude and reflection.</li>
+        <li>Built to support focus, motivation and better habits over time.</li>
+        <li>Loved by students, professionals and busy adults in the US & Canada.</li>
+        <li>Perfect if you want both productivity and emotional wellbeing in one planner.</li>
+      </ul>
+
+      <div class="hero-cta-row">
+        <a class="btn-primary"
+           href="https://amzn.to/3XBhR3B"
+           target="_blank" rel="nofollow noopener sponsored">
+          <span class="icon">🛒</span>
+          <span>Buy Panda Planner Classic on Amazon</span>
+        </a>
+        <a class="btn-secondary" href="#inside">
+          👀 See daily pages
+        </a>
+      </div>
+      <div class="hero-note">
+        Amazon affiliate link — price stays the same for you, and you support Lovely Planners Studio.
+      </div>
+    </div>
+
+    <div class="hero-img-wrap">
+      <div class="hero-main">
+        <img src="https://m.media-amazon.com/images/I/71OmerhVNSL._AC_SL1080_.jpg"
+             alt="Panda Planner Classic cover daily productivity and happiness planner" />
+      </div>
+      <div class="hero-thumb">
+        <img src="https://m.media-amazon.com/images/I/71Y9OfT9qjL._AC_SL1500_.jpg"
+             alt="Panda Planner Classic daily layout with priorities, schedule and tasks" />
+      </div>
+      <div class="hero-thumb">
+        <img src="https://m.media-amazon.com/images/I/71gjEHjgaJL._AC_SL1500_.jpg"
+             alt="Panda Planner Classic weekly and monthly overview pages" />
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="section">
+    <h2>Who is the Panda Planner Classic perfect for?</h2>
+    <div class="two-col">
+      <div class="card">
+        <span class="pill">For busy, thoughtful minds</span>
+        <p>
+          Panda Planner Classic is often chosen by people who want to be productive,
+          but also care deeply about how they feel. It’s a great fit for:
+        </p>
+        <ul>
+          <li><strong>Students & graduates</strong> juggling studies, work and personal goals.</li>
+          <li><strong>Professionals</strong> dealing with meetings, deadlines and constant decisions.</li>
+          <li><strong>People rebuilding routines</strong> after stressful seasons or burnout.</li>
+          <li><strong>Those with distracted minds</strong> who need structure without harsh pressure.</li>
+          <li><strong>Anyone who wants more gratitude and reflection</strong> in everyday life.</li>
+        </ul>
+        <div class="highlight">
+          Panda Planner is not just about doing more — it’s about feeling better while you do it.
+          The pages gently remind you to notice wins, gratitude and progress, not just tasks.
+        </div>
+      </div>
+      <div class="card">
+        <span class="pill">Why people in the US & Canada love it</span>
+        <ul>
+          <li><strong>Science-based approach</strong> using positive psychology and productivity research.</li>
+          <li><strong>Daily layouts</strong> that combine schedule, priorities, wins and reflection.</li>
+          <li><strong>Focus on gratitude</strong> to support mental wellbeing and resilience.</li>
+          <li><strong>Structured but human</strong> — not as rigid as some heavy goal systems.</li>
+          <li><strong>Works well for morning and evening routines</strong> as a daily reset tool.</li>
+        </ul>
+        <p class="muted">
+          Many reviewers say Panda Planner helped them come back to planning after feeling exhausted or scattered,
+          because it respects both the mind and the heart.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIDE THE PLANNER -->
+  <section class="section" id="inside">
+    <h2>What’s inside the Panda Planner Classic?</h2>
+    <div class="two-col">
+      <div class="card">
+        <h3>1. Daily pages for focus & gratitude</h3>
+        <ul>
+          <li>Sections for daily priorities, schedule and to-do lists.</li>
+          <li>Gratitude prompts to train your brain to notice what’s going well.</li>
+          <li>Space to note wins, lessons and reflections at the end of the day.</li>
+        </ul>
+
+        <h3>2. Weekly & monthly overviews</h3>
+        <ul>
+          <li>Weekly review pages to look at patterns and progress.</li>
+          <li>Monthly overview pages to reset goals and intentions.</li>
+          <li>Helps you connect daily actions to bigger goals.</li>
+        </ul>
+
+        <h3>3. Goal & habit sections</h3>
+        <ul>
+          <li>Areas to define meaningful goals for different life areas.</li>
+          <li>Simple habit tracking options (depending on edition).</li>
+          <li>Prompts to stay connected to your “why”.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>4. Designed for real, imperfect days</h3>
+        <ul>
+          <li>Layouts that work even on days when you don’t fill every box.</li>
+          <li>Daily pages that can handle busy schedules and quiet days alike.</li>
+          <li>Gentle reminders to reflect — not punish — when things don’t go as planned.</li>
+        </ul>
+
+        <h3>5. Built with care & durability</h3>
+        <ul>
+          <li>Quality cover and paper designed for daily handling.</li>
+          <li>Professional look that fits home, school and office environments.</li>
+          <li>Great as a gift for someone who needs both structure and encouragement.</li>
+        </ul>
+        <div class="highlight">
+          Panda Planner works beautifully as a partner to your digital tools:
+          keep appointments in your phone, but use the planner to think, reflect and intentionally shape your day.
+        </div>
+      </div>
+    </div>
+
+    <div class="inside-grid">
+      <img src="https://m.media-amazon.com/images/I/71Y9OfT9qjL._AC_SL1500_.jpg"
+           alt="Panda Planner Classic inside daily pages with gratitude and schedule" />
+      <img src="https://m.media-amazon.com/images/I/71gjEHjgaJL._AC_SL1500_.jpg"
+           alt="Panda Planner Classic weekly review and planning pages" />
+      <img src="https://m.media-amazon.com/images/I/71FQRTGUJyL._AC_SL1500_.jpg"
+           alt="Panda Planner Classic monthly and goal overview layouts" />
+    </div>
+  </section>
+
+  <!-- PROS & CONS -->
+  <section class="section">
+    <h2>Is the Panda Planner Classic right for you?</h2>
+    <div class="pros-cons">
+      <div class="card">
+        <h3>👍 Strong points</h3>
+        <ul>
+          <li>Science-based structure that combines productivity and wellbeing.</li>
+          <li>Daily focus on gratitude, wins and reflection — not just tasks.</li>
+          <li>Helpful for people rebuilding routines or focus after stressful times.</li>
+          <li>Great for students, professionals and anyone with a lot to manage.</li>
+          <li>Feels more human and emotional than purely “mechanical” planners.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Things to keep in mind</h3>
+        <ul>
+          <li>Daily pages mean you’ll use it most days to get full value.</li>
+          <li>If you prefer super-minimal layouts, the prompts may feel a bit full.</li>
+          <li>Better for people who enjoy a short morning and/or evening check-in.</li>
+        </ul>
+        <div class="highlight">
+          If you want a planner that cares about your feelings as much as your tasks,
+          Panda Planner Classic is a strong and supportive choice.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO USE -->
+  <section class="section">
+    <h2>How to use Panda Planner in a gentle daily routine</h2>
+    <p>
+      You don’t need to fill every space to benefit from Panda Planner.
+      A simple daily ritual can make a big difference over time.
+    </p>
+    <ul>
+      <li><strong>Morning (3–5 minutes):</strong> Write your top priorities, key tasks and one thing you’re grateful for.</li>
+      <li><strong>During the day:</strong> Add tasks as needed, check off wins and gently adjust as life changes.</li>
+      <li><strong>Evening (3–5 minutes):</strong> Note what went well, what you learned and how you feel.</li>
+      <li><strong>End of the week:</strong> Use the weekly review to see patterns in your energy, focus and mood.</li>
+      <li><strong>Each month:</strong> Reconnect with your bigger goals and adjust your routines with kindness.</li>
+    </ul>
+    <p class="muted">
+      The goal is not a “perfect streak” of planning — it’s a more honest and supportive relationship
+      with your own time, energy and attention.
+    </p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <h2>Panda Planner Classic — Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>Is Panda Planner Classic dated or undated?</h3>
+      <p>
+        Many versions are undated, which means you can start any time of year and skip days
+        without wasting pages. Check the specific edition details on Amazon.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is it good for people who feel overwhelmed?</h3>
+      <p>
+        Yes. Panda Planner is often recommended for people rebuilding focus and routines.
+        The combination of gratitude, priorities and reflection can feel grounding and supportive.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I use it with digital calendars?</h3>
+      <p>
+        Absolutely. Many users keep appointments on their phones and use Panda Planner
+        as a daily mind-space to think, plan and reflect.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does it ship to the US & Canada?</h3>
+      <p>
+        Yes, Panda Planner Classic is available on Amazon with fast shipping options in the US and Canada.
+        See the Amazon listing for current delivery details and editions.
+      </p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section">
+    <h2>Ready to give your days more focus and joy?</h2>
+    <p>
+      If you’re looking for a planner that helps you get things done
+      <em>and</em> feel better about your days, Panda Planner Classic is a beautiful option.
+      It’s a small daily meeting with yourself — to plan, to notice, and to grow.
+    </p>
+    <div class="hero-cta-row">
+      <a class="btn-primary"
+         href="https://amzn.to/3XBhR3B"
+         target="_blank" rel="nofollow noopener sponsored">
+        <span class="icon">✨</span>
+        <span>Get Panda Planner Classic on Amazon</span>
+      </a>
+      <a class="btn-secondary" href="index.html#books">
+        ← Browse more planners
+      </a>
+    </div>
+    <p class="muted" style="margin-top:10px">
+      Affiliate disclosure: Links to Amazon are affiliate links; we may earn a small commission at no extra cost to you.
+    </p>
+
+    <div class="back-home">
+      ← Back to <a href="index.html">Lovely Planners Studio home page</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Lovely Planners Studio — All Rights Reserved
+</footer>
+
+</body>
+</html>
