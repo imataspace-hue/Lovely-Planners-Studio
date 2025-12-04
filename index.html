@@ -6,8 +6,9 @@
 
   <title>Lovely Planners Studio — Premium Planners & Journals (2026)</title>
 
-  <meta name="description" content="Lovely Planners Studio — premium planners & journals designed to bring calm, focus, gentle routines, emotional clarity, motivation, and beautiful productivity habits. Gift-ready planners, strawberry journals, unicorn notebooks, anime planners, and organizational tools. Global fast shipping to the US, Canada, UK & Europe." />
-  <meta name="keywords" content="planner, daily planner, 2026 planner, productivity planner, budget planner, Clever Fox Budget Planner, ZICOTO Productivity Planner, Panda Planner Classic, Legend Planner, Erin Condren Daily Life Planner, Hobonichi Techo, The Happy Planner, journal, cute journals, strawberry journal, unicorn journal, anime planner, study planner, gamer planner, school planner, gift planner, teen planner, focus planner, mental clarity" />
+  <!-- SEO basics -->
+  <meta name="description" content="Lovely Planners Studio — premium planners & journals designed to bring calm, focus, gentle routines, emotional clarity and beautiful productivity. Shop 13 Lovely Planners Studio designs + 7 global best-selling planners with fast Amazon shipping to the US, Canada, UK & Europe." />
+  <meta name="keywords" content="planner, 2026 planner, productivity planner, Legend Planner, Erin Condren planner, Clever Fox Budget Planner, Panda Planner Classic, ZICOTO Productivity Planner, Hobonichi Techo, The Happy Planner, gift planner, teen planner, study planner, daily journal" />
   <link rel="canonical" href="https://www.lovelyplannersstudio.com/" />
   <meta name="robots" content="index,follow" />
 
@@ -18,7 +19,7 @@
   <!-- Open Graph -->
   <meta property="og:site_name" content="Lovely Planners Studio" />
   <meta property="og:title" content="Lovely Planners Studio — Premium Planners & Journals (2026)" />
-  <meta property="og:description" content="Premium planners and journals that help build calm routines, clarity, motivation and emotional balance. Printed through Amazon — fast global delivery." />
+  <meta property="og:description" content="Shop 20 planners & journals — 13 Lovely Planners Studio designs + 7 global best-sellers including Legend Planner, Erin Condren, Clever Fox, Panda Planner, ZICOTO and more." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.lovelyplannersstudio.com/" />
   <meta property="og:image" content="https://m.media-amazon.com/images/I/41GryDZx6pL._SY445_SX342_ML2_.jpg" />
@@ -26,7 +27,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Lovely Planners Studio — Calm Productivity Tools" />
-  <meta name="twitter:description" content="Cute, calming planners and journals for focus, mental clarity, gentle planning rituals and beautiful productivity." />
+  <meta name="twitter:description" content="Cute, calming planners and journals for focus, mental clarity and gentle daily planning rituals." />
   <meta name="twitter:image" content="https://m.media-amazon.com/images/I/41GryDZx6pL._SY445_SX342_ML2_.jpg" />
 
   <!-- Preconnect -->
@@ -64,35 +65,52 @@
     *{box-sizing:border-box}
     body{margin:0;background:var(--bg);font-family:var(--font);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
     a{color:var(--accent2);text-decoration:none}
+    img{max-width:100%;display:block}
+
     header{position:sticky;top:0;z-index:60;background:linear-gradient(90deg,#3b82f6,#60a5fa);color:#fff;box-shadow:0 8px 26px rgba(2,6,23,0.16)}
     .nav{max-width:var(--maxw);margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
     .brand{display:flex;align-items:center;gap:12px}
     .brand img{width:60px;height:60px;border-radius:999px;object-fit:cover;box-shadow:0 8px 30px rgba(0,0,0,0.18)}
     .brand h1{margin:0;font-size:18px;letter-spacing:.06em}
-    nav a{margin-left:10px;padding:8px 10px;border-radius:999px;color:rgba(255,255,255,0.95);font-weight:600}
-    .btn-cta{background:var(--accent2);padding:10px 14px;border-radius:999px;color:#fff;font-weight:700;box-shadow:0 12px 28px rgba(79,124,255,0.18)}
+    nav a{margin-left:10px;padding:8px 10px;border-radius:999px;color:rgba(255,255,255,0.95);font-weight:600;font-size:14px}
+    .btn-cta{background:linear-gradient(90deg,#3b82f6,#6366f1);padding:10px 14px;border-radius:999px;color:#fff !important;font-weight:700;box-shadow:0 12px 28px rgba(79,124,255,0.25)}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.9);color:#fff;padding:8px 12px;border-radius:999px;font-weight:600}
+
     main{max-width:var(--maxw);margin:26px auto;padding:0 18px 60px}
-    .hero{background:linear-gradient(135deg,#f4fbf9,#eef6ff);padding:30px;border-radius:20px;box-shadow:var(--shadow)}
-    .hero h2{margin:0 0 8px;font-size:26px}
+    .hero{background:linear-gradient(135deg,#f4fbf9,#eef6ff);padding:30px;border-radius:20px;box-shadow:var(--shadow);margin-top:18px}
+    .hero h2{margin:0 0 10px;font-size:26px}
     .hero p{margin:0;color:var(--muted);max-width:760px}
-    .actions{margin-top:14px;display:flex;gap:12px;flex-wrap:wrap}
-    .section{margin-top:28px}
+    .actions{margin-top:16px;display:flex;gap:12px;flex-wrap:wrap}
+    .section{margin-top:32px}
     .section h3{margin:0 0 10px;font-size:20px}
+    .section p.badge{margin:0;color:var(--muted);font-size:14px}
+    .best-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:14px}
+    .best-card{background:var(--card);padding:14px;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow);display:flex;flex-direction:column}
+    .best-card img{width:100%;height:240px;object-fit:cover;border-radius:10px;background:#e5edf5}
+    .best-card h4{margin:10px 0 6px;font-size:16px}
+    .best-card p{margin:0;color:var(--muted);flex:1;font-size:14px}
+    .buy-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+    .buy-btn{background:var(--accent2);color:#fff;padding:9px 11px;border-radius:999px;font-weight:700;font-size:13px}
+    .more-btn{border:1px solid var(--accent2);color:var(--accent2);padding:8px 10px;border-radius:999px;font-size:13px}
+
+    .guide-card{background:var(--card);padding:16px;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow)}
     .books-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:12px}
     .card{background:var(--card);padding:12px;border-radius:14px;box-shadow:var(--shadow);border:1px solid var(--border);display:flex;flex-direction:column}
     .card img{width:100%;height:260px;object-fit:cover;border-radius:10px;background:#e5edf5}
     .card h4{margin:10px 0 6px;font-size:16px}
-    .card p{margin:0;color:var(--muted);flex:1}
-    .buy-row{display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap}
-    .buy-btn{background:var(--accent2);color:#fff;padding:10px 12px;border-radius:999px;font-weight:700;text-decoration:none;font-size:14px}
-    .more-btn{background:transparent;border:1px solid var(--accent2);color:var(--accent2);padding:9px 10px;border-radius:999px;text-decoration:none;font-size:13px}
-    .guide-card{background:var(--card);padding:16px;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow)}
-    footer{margin-top:28px;padding:18px 0;text-align:center;color:var(--muted);font-size:13px}
+    .card p{margin:0;color:var(--muted);flex:1;font-size:14px}
+
+    .shop-promo{margin-top:26px;background:linear-gradient(135deg,#e0f2fe,#eef2ff);padding:20px;border-radius:18px;box-shadow:var(--shadow);display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+    .shop-promo h3{margin:0 0 6px}
+    .shop-promo p{margin:0;color:var(--muted);max-width:520px}
+
+    footer{margin-top:32px;padding:18px 0;text-align:center;color:var(--muted);font-size:13px}
     .meta-links a{margin:0 6px;color:var(--muted)}
-    .best-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:14px}
-    .best-card{background:var(--card);padding:14px;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow);display:flex;flex-direction:column}
-    .best-card img{width:100%;height:240px;object-fit:cover;border-radius:10px;background:#e5edf5}
-    .badge{font-size:14px;margin-bottom:6px}
+
+    @media(max-width:760px){
+      .hero{padding:22px}
+      .shop-promo{padding:16px}
+    }
   </style>
 
   <!-- Structured data (Website + Organization + Author) -->
@@ -161,22 +179,23 @@
         <a href="#books">Books</a>
         <a href="#guides">Guides</a>
         <a href="#articles">Articles</a>
-        <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a class="btn-cta" href="#books">Shop (Buy on Amazon)</a>
+        <!-- زر الشوب القوي -->
+        <a class="btn-cta" href="shop.html">Shop Planners</a>
       </nav>
     </div>
   </header>
 
   <main>
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="top">
       <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap">
         <div style="flex:1;min-width:260px">
           <h2>Premium planners & journals for calm, focus and gift-ready joy</h2>
-          <p>Beautiful, gentle layouts designed to help busy people — kids, teens, students, parents and professionals — build small daily wins without pressure. Shop the 2026 collection or read our guides to pick the perfect planner.</p>
+          <p>Beautiful, gentle layouts designed to help busy people — kids, teens, students, parents and professionals — build small daily wins without pressure. Shop the 2026 collection, explore our shop, or read guides to pick the perfect planner.</p>
           <div class="actions">
-            <a class="btn-cta" href="#books">Browse Collection</a>
+            <a class="btn-cta" href="#books">Browse 2026 Collection</a>
+            <a class="btn-ghost" href="shop.html">🛒 Open Full Shop</a>
             <a class="more-btn" href="#guides">Read Guides</a>
           </div>
         </div>
@@ -186,11 +205,11 @@
       </div>
     </section>
 
-    <!-- BEST SELLER PLANNER PICKS (EXTERNAL) -->
+    <!-- BEST SELLER PLANNER PICKS (7 GLOBAL BEST-SELLERS) -->
     <section id="best-picks" class="section">
-      <h3>⭐ Best Planner Picks Loved in the US & Canada (2026)</h3>
-      <p class="badge" style="color:#555;">
-        Alongside our own Lovely Planners Studio designs, we also recommend these highly successful global best-sellers.
+      <h3>⭐ Global Best-Selling Planners Loved in the US & Canada (2026)</h3>
+      <p class="badge">
+        Alongside our own Lovely Planners Studio designs, we also recommend these 7 highly successful global best-sellers.
         They have strong demand, thousands of happy customers and proven results in the US and Canadian markets.
       </p>
 
@@ -198,101 +217,90 @@
         <!-- Clever Fox Budget Planner -->
         <article class="best-card">
           <img src="https://m.media-amazon.com/images/I/81703PZ75ML._AC_SL1500_.jpg" alt="Clever Fox Budget Planner cover">
-          <h4 style="margin:10px 0 6px;font-size:16px">Clever Fox Budget Planner</h4>
-          <p style="color:var(--muted);margin:0;flex:1">
-            A guided monthly budgeting & expense planner that helps you track income, bills, savings and debt payoff
-            so you finally feel in control of your money.
-          </p>
+          <h4>Clever Fox Budget Planner</h4>
+          <p>Money clarity with monthly budgets, bill tracking, savings goals and debt payoff trackers. Great for individuals, couples and families who want to see where every dollar goes.</p>
           <div class="buy-row">
             <a class="buy-btn" href="https://amzn.to/4ixKPei" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
-            <a class="more-btn" href="clever-fox-budget-planner.html">Full review</a>
+            <a class="more-btn" href="clever-fox-budget-planner.html">Full guide</a>
           </div>
         </article>
 
         <!-- ZICOTO Productivity Planner -->
         <article class="best-card">
           <img src="https://m.media-amazon.com/images/I/81qlXegdHSL._AC_SL1500_.jpg" alt="ZICOTO Productivity Planner cover">
-          <h4 style="margin:10px 0 6px;font-size:16px">ZICOTO Productivity Planner</h4>
-          <p style="color:var(--muted);margin:0;flex:1">
-            Minimal, calm and very clean. Perfect for weekly clarity, simple task lists and realistic planning
-            without feeling overwhelmed — great for adults & college students.
-          </p>
+          <h4>ZICOTO Productivity Planner</h4>
+          <p>Minimal, calm and very clean. Perfect for adults and college students who want weekly clarity, simple to-do lists and realistic planning without overwhelm.</p>
           <div class="buy-row">
             <a class="buy-btn" href="https://amzn.to/4pe3j61" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
-            <a class="more-btn" href="zicoto-productivity-planner.html">Full review</a>
+            <a class="more-btn" href="zicoto-productivity-planner.html">Full guide</a>
           </div>
         </article>
 
         <!-- Panda Planner Classic -->
         <article class="best-card">
           <img src="https://m.media-amazon.com/images/I/71OmerhVNSL._AC_SL1080_.jpg" alt="Panda Planner Classic cover">
-          <h4 style="margin:10px 0 6px;font-size:16px">Panda Planner Classic</h4>
-          <p style="color:var(--muted);margin:0;flex:1">
-            Built with neuroscience principles, Panda Planner focuses on happiness, gratitude, reflection and better focus.
-            Ideal for people recovering from burnout, overwhelm or scattered thinking.
-          </p>
+          <h4>Panda Planner Classic</h4>
+          <p>Built around happiness, gratitude and focus. Ideal for people recovering from burnout, overwhelm or scattered thinking who want a gentle mindset support system.</p>
           <div class="buy-row">
             <a class="buy-btn" href="https://amzn.to/3XBhR3B" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
-            <a class="more-btn" href="panda-planner-classic.html">Full review</a>
+            <a class="more-btn" href="panda-planner-classic.html">Full guide</a>
           </div>
         </article>
 
         <!-- Legend Planner -->
         <article class="best-card">
           <img src="https://m.media-amazon.com/images/I/919b4+PZR1L._AC_SL1500_.jpg" alt="Legend Planner cover">
-          <h4 style="margin:10px 0 6px;font-size:16px">Legend Planner</h4>
-          <p style="color:var(--muted);margin:0;flex:1">
-            One of the strongest goal-planning systems worldwide. Map your vision, break it into milestones,
-            and create weekly actions that keep you motivated long term.
-          </p>
+          <h4>Legend Planner</h4>
+          <p>One of the strongest goal-planning systems worldwide. Helps you map your life vision, break it into yearly goals, and create monthly and weekly action steps that keep you accountable.</p>
           <div class="buy-row">
             <a class="buy-btn" href="https://amzn.to/4iFoHie" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
-            <a class="more-btn" href="legend-planner.html">Full review</a>
+            <a class="more-btn" href="legend-planner.html">Full guide</a>
           </div>
         </article>
 
         <!-- Erin Condren Daily Life Planner -->
         <article class="best-card">
           <img src="https://m.media-amazon.com/images/I/81B3mXnLFOL._AC_SL1500_.jpg" alt="Erin Condren Daily Life Planner cover">
-          <h4 style="margin:10px 0 6px;font-size:16px">Erin Condren Daily Life Planner</h4>
-          <p style="color:var(--muted);margin:0;flex:1">
-            A premium lifestyle planner with beautiful designs, strong daily structure and generous note space.
-            Loved by US teachers, nurses and working women who enjoy aesthetic organization.
-          </p>
+          <h4>Erin Condren Daily Life Planner</h4>
+          <p>A premium lifestyle planner with beautiful designs, structured daily layouts and plenty of note space. Very popular with US teachers, nurses and working women.</p>
           <div class="buy-row">
             <a class="buy-btn" href="https://amzn.to/4pKZAwH" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
-            <a class="more-btn" href="erin-condren-daily-life-planner.html">Full review</a>
+            <a class="more-btn" href="erin-condren-daily-life-planner.html">Full guide</a>
           </div>
         </article>
 
         <!-- Hobonichi Techo Planner -->
         <article class="best-card">
           <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/40b27565-04dd-4886-b294-1922ba40ac31.__CR0,0,800,600_PT0_SX800_V1___.png" alt="Hobonichi Techo Planner cover">
-          <h4 style="margin:10px 0 6px;font-size:16px">Hobonichi Techo Planner</h4>
-          <p style="color:var(--muted);margin:0;flex:1">
-            Iconic Japanese daily planner loved by writers and journalers. Thin Tomoe River paper, flexible layouts,
-            and a cult-following among stationery lovers worldwide.
-          </p>
+          <h4>Hobonichi Techo Planner</h4>
+          <p>Cult-favorite Japanese planner with Tomoe River paper, daily pages and endless journaling potential. Loved by stationery fans, artists and diary writers.</p>
           <div class="buy-row">
             <a class="buy-btn" href="https://amzn.to/3KG15NM" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
-            <a class="more-btn" href="hobonichi-techo-planner.html">Full review</a>
+            <a class="more-btn" href="hobonichi-techo-planner.html">Full guide</a>
           </div>
         </article>
 
         <!-- The Happy Planner -->
         <article class="best-card">
           <img src="https://m.media-amazon.com/images/I/71PLKOZJk9L._AC_SL1500_.jpg" alt="The Happy Planner cover">
-          <h4 style="margin:10px 0 6px;font-size:16px">The Happy Planner</h4>
-          <p style="color:var(--muted);margin:0;flex:1">
-            Colorful disc-bound planner with tons of stickers, dashboards and extension packs — perfect for creative
-            people who love decorating their weekly spreads and making planning fun.
-          </p>
+          <h4>The Happy Planner</h4>
+          <p>Disc-bound, customizable and sticker-friendly. Perfect for creative planners who love decorative layouts, color and flexible inserts.</p>
           <div class="buy-row">
             <a class="buy-btn" href="https://amzn.to/3Xyowvq" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
-            <a class="more-btn" href="the-happy-planner.html">Full review</a>
+            <a class="more-btn" href="the-happy-planner.html">Full guide</a>
           </div>
         </article>
+      </div>
 
+      <!-- SHOP PROMO BLOCK -->
+      <div class="shop-promo">
+        <div>
+          <h3>🛒 Shop All 20 Planners & Journals</h3>
+          <p>Explore 13 Lovely Planners Studio designs (strawberry, unicorn, anime, gamer & minimal planners) plus these 7 global best-sellers — all in one curated shop page.</p>
+        </div>
+        <div>
+          <a class="btn-cta" href="shop.html" style="padding:12px 20px;border-radius:999px;font-size:15px;font-weight:700">Open Full Shop Page</a>
+        </div>
       </div>
     </section>
 
@@ -607,7 +615,7 @@
       <h3>Contact & Partnerships</h3>
       <div class="guide-card" style="margin-top:8px">
         <p>Email: <a href="mailto:imata.space@gmail.com">imata.space@gmail.com</a></p>
-        <p>Instagram: <a href="https://www.instagram.com/lovelyplannersstudio" target="_blank">@@lovelyplannersstudio</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/lovelyplannersstudio" target="_blank">@lovelyplannersstudio</a></p>
         <p>Pinterest: <a href="https://www.pinterest.com/LovelyPlannersStudio" target="_blank">LovelyPlannersStudio</a></p>
         <p style="margin-top:8px;color:var(--muted)"><strong>Affiliate disclosure:</strong> Links to Amazon are affiliate links; we may earn a small commission at no extra cost to you.</p>
       </div>
@@ -618,7 +626,12 @@
   <footer>
     <div>© 2025 Lovely Planners Studio — All Rights Reserved</div>
     <div class="meta-links" style="margin-top:8px">
-      <a href="#books">Books</a> • <a href="#guides">Guides</a> • <a href="#articles">Articles</a> • <a href="#about">About</a> • <a href="#contact">Contact</a>
+      <a href="#books">Books</a> •
+      <a href="#guides">Guides</a> •
+      <a href="#articles">Articles</a> •
+      <a href="#about">About</a> •
+      <a href="#contact">Contact</a> •
+      <a href="shop.html">Shop Planners</a>
     </div>
   </footer>
 </body>
