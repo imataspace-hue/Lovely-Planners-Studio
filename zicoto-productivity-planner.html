@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ZICOTO Productivity Planner — Simple Weekly Focus Planner | Lovely Planners Studio</title>
+
+  <meta name="description"
+        content="ZICOTO Productivity Planner is a simple, calm weekly planner that helps you set priorities, track tasks and build realistic routines without feeling overwhelmed — loved by students, professionals and busy women in the US & Canada." />
+  <meta name="keywords"
+        content="ZICOTO Productivity Planner, productivity planner, weekly planner, goal planner, planner for students, planner for women, planner for work, to-do list planner, simple planner, minimal planner, focus planner" />
+  <link rel="canonical" href="https://www.lovelyplannersstudio.com/zicoto-productivity-planner.html" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product" />
+  <meta property="og:site_name" content="Lovely Planners Studio" />
+  <meta property="og:title" content="ZICOTO Productivity Planner — Calm Weekly Focus Planner" />
+  <meta property="og:description"
+        content="A calm, minimalist productivity planner to help you focus on what matters each week — with simple layouts for tasks, goals and notes." />
+  <meta property="og:url" content="https://www.lovelyplannersstudio.com/zicoto-productivity-planner.html" />
+  <meta property="og:image"
+        content="https://m.media-amazon.com/images/I/81qlXegdHSL._AC_SL1500_.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ZICOTO Productivity Planner — Simple Weekly Planner" />
+  <meta name="twitter:description"
+        content="A gentle productivity planner with clean weekly layouts, priorities and to-do lists — perfect for students, professionals and busy women." />
+  <meta name="twitter:image"
+        content="https://m.media-amazon.com/images/I/81qlXegdHSL._AC_SL1500_.jpg" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://m.media-amazon.com" crossorigin />
+  <link rel="preconnect" href="https://amzn.to" crossorigin />
+
+  <!-- Styles (نفس روح الصفحات السابقة) -->
+  <style>
+    :root {
+      --bg: #f5f8ff;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --accent: #0ea5e9;
+      --accent2: #2563eb;
+      --border: #e5e7eb;
+      --radius: 16px;
+      --shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+      --maxw: 1080px;
+      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent2);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: linear-gradient(90deg, #0f172a, #0ea5e9);
+      color: #fff;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.4);
+    }
+
+    .nav {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      object-fit: cover;
+      background: #fff;
+      box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.85);
+    }
+
+    .brand-text-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .brand-text-sub {
+      font-size: 11px;
+      opacity: 0.9;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      font-size: 13px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: #e5f2ff;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(191, 219, 254, 0.4);
+      backdrop-filter: blur(4px);
+      background: rgba(15, 23, 42, 0.25);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    main {
+      max-width: var(--maxw);
+      margin: 24px auto 60px;
+      padding: 0 18px 40px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 30px;
+      align-items: center;
+      background: radial-gradient(circle at top left, #e0f2fe, #eef2ff);
+      border-radius: 28px;
+      padding: 24px 24px 22px;
+      box-shadow: var(--shadow);
+      margin-bottom: 30px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.1);
+      color: #0f766e;
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      margin-bottom: 8px;
+    }
+
+    .hero h1 {
+      font-size: 26px;
+      margin: 0 0 10px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .hero-list {
+      font-size: 14px;
+      margin: 0 0 16px;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .hero-list li {
+      margin-bottom: 4px;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #0ea5e9, #2563eb);
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(37, 99, 235, 0.42);
+    }
+
+    .btn-primary span.icon {
+      font-size: 16px;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.7);
+      background: rgba(255, 255, 255, 0.9);
+      color: #0f172a;
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .hero-note {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero-img-wrap {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 10px;
+    }
+
+    .hero-main {
+      grid-row: 1 / span 2;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.35);
+      background: #eef2ff;
+    }
+
+    .hero-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-thumb {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.18);
+      background: #fff;
+    }
+
+    .hero-thumb img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .section {
+      margin-top: 30px;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 24px;
+      padding: 22px 18px 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .section h3 {
+      font-size: 17px;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    .section p {
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(226, 232, 240, 0.95);
+    }
+
+    .pill {
+      display: inline-flex;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      background: rgba(224, 242, 254, 0.9);
+      color: #0369a1;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 6px;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    li + li {
+      margin-top: 4px;
+    }
+
+    .highlight {
+      background: #ecfeff;
+      border-radius: 12px;
+      padding: 9px 10px;
+      border: 1px dashed rgba(56, 189, 248, 0.6);
+      font-size: 13px;
+      margin-top: 8px;
+      color: #0f766e;
+    }
+
+    .pros-cons {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 18px;
+      margin-top: 12px;
+    }
+
+    .pros-cons h3 {
+      margin-top: 0;
+    }
+
+    .faq-item {
+      border-top: 1px solid rgba(226, 232, 240, 0.9);
+      padding-top: 10px;
+      margin-top: 10px;
+    }
+
+    .faq-item h3 {
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .back-home {
+      margin-top: 16px;
+      font-size: 13px;
+    }
+
+    .inside-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .inside-grid img {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid rgba(229, 231, 235, 0.95);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.18);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 16px 28px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 860px) {
+      header { position: static; }
+      .hero { grid-template-columns: minmax(0, 1fr); }
+      .hero-img-wrap { order: -1; }
+      .two-col,
+      .pros-cons,
+      .inside-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <div class="brand-logo"></div>
+      <div>
+        <div class="brand-text-title">Lovely Planners Studio</div>
+        <div class="brand-text-sub">Planners • Journals • Calm Productivity Tools</div>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html#books">Books</a>
+      <a href="index.html#guides">Guides</a>
+      <a href="index.html#articles">Articles</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div>
+      <div class="hero-pill">
+        🌿 Calm Weekly Productivity — No Overwhelm
+      </div>
+      <h1>ZICOTO Productivity Planner — Simple Weekly Focus Planner</h1>
+      <p class="hero-sub">
+        A clean, minimalist productivity planner that helps you focus on the most important tasks each week,
+        without filling your life with complicated systems or pressure.
+      </p>
+
+      <ul class="hero-list">
+        <li>Weekly layouts with priorities, tasks and notes.</li>
+        <li>Gentle structure for planning without feeling overwhelmed.</li>
+        <li>Perfect for students, professionals and busy women.</li>
+        <li>Minimal, modern design — easy on the eyes and mind.</li>
+      </ul>
+
+      <div class="hero-cta-row">
+        <a class="btn-primary"
+           href="https://amzn.to/4pe3j61"
+           target="_blank" rel="nofollow noopener sponsored">
+          <span class="icon">🛒</span>
+          <span>Buy ZICOTO Productivity Planner on Amazon</span>
+        </a>
+        <a class="btn-secondary" href="#inside">
+          👀 See weekly pages
+        </a>
+      </div>
+      <div class="hero-note">
+        Amazon affiliate link — price stays the same for you, and you support Lovely Planners Studio.
+      </div>
+    </div>
+
+    <div class="hero-img-wrap">
+      <div class="hero-main">
+        <img src="https://m.media-amazon.com/images/I/81qlXegdHSL._AC_SL1500_.jpg"
+             alt="ZICOTO Productivity Planner cover with simple, modern layout" />
+      </div>
+      <div class="hero-thumb">
+        <img src="https://m.media-amazon.com/images/I/81ZmMNnTOCL._AC_SL1500_.jpg"
+             alt="ZICOTO Productivity Planner weekly spread with priorities and tasks" />
+      </div>
+      <div class="hero-thumb">
+        <img src="https://m.media-amazon.com/images/I/713l16du2rL._AC_SL1500_.jpg"
+             alt="ZICOTO Productivity Planner overview pages and simple layouts" />
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="section">
+    <h2>Who is the ZICOTO Productivity Planner perfect for?</h2>
+    <div class="two-col">
+      <div class="card">
+        <span class="pill">For gentle, realistic planning</span>
+        <p>
+          This planner is ideal if you want more focus and structure — but you don’t want a heavy,
+          complicated planning system. It works especially well for:
+        </p>
+        <ul>
+          <li><strong>Students & college learners</strong> who want to balance classes, study and life.</li>
+          <li><strong>Busy professionals</strong> juggling meetings, tasks and personal to-dos.</li>
+          <li><strong>Women with full schedules</strong> (work, home, kids, personal goals).</li>
+          <li><strong>People who get overwhelmed easily</strong> by too many boxes and trackers.</li>
+          <li><strong>Beginner planners</strong> who want something clean and non-intimidating.</li>
+        </ul>
+        <div class="highlight">
+          If other planners felt “too much” for your brain, ZICOTO offers a softer, more breathable layout —
+          enough structure to guide you, but not so much that you shut down.
+        </div>
+      </div>
+      <div class="card">
+        <span class="pill">Why people in the US & Canada love it</span>
+        <ul>
+          <li><strong>Minimal design</strong> that keeps your focus on tasks, not decorations.</li>
+          <li><strong>Weekly overview</strong> so you can see your whole week at a glance.</li>
+          <li><strong>Space for priorities</strong> — not just long, exhausting to-do lists.</li>
+          <li><strong>Neutral, modern look</strong> that fits work desks, home offices and study spaces.</li>
+          <li><strong>Great as a starter productivity planner</strong> or as a calm companion to a more complex system.</li>
+        </ul>
+        <p class="muted">
+          Many reviewers say this planner helped them “finally stick with planning” because
+          it didn’t make them feel behind or guilty — just gently supported.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIDE THE PLANNER -->
+  <section class="section" id="inside">
+    <h2>What’s inside the ZICOTO Productivity Planner?</h2>
+    <div class="two-col">
+      <div class="card">
+        <h3>1. Weekly focus pages</h3>
+        <ul>
+          <li>Weekly spreads with space for main priorities and daily tasks.</li>
+          <li>Clear layout for appointments, to-dos and notes.</li>
+          <li>Simple boxes that are easy to fill and review.</li>
+        </ul>
+
+        <h3>2. Goal & planning sections</h3>
+        <ul>
+          <li>Sections to set short-term and medium-term goals.</li>
+          <li>Areas to break goals into practical steps.</li>
+          <li>Space for reflection and small check-ins.</li>
+        </ul>
+
+        <h3>3. Notes & extra space</h3>
+        <ul>
+          <li>Notes pages you can use for projects, ideas or journaling.</li>
+          <li>Room to adapt the planner to your personal style — lists, mind maps or brainstorming.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>4. Calm, uncluttered layout</h3>
+        <ul>
+          <li>Clean typography and soft layout lines.</li>
+          <li>No heavy graphics or distractions around the page.</li>
+          <li>Designed to support focus and mental clarity.</li>
+        </ul>
+
+        <h3>5. Built for everyday life</h3>
+        <ul>
+          <li>Sturdy cover and quality paper.</li>
+          <li>Works well for both home and office settings.</li>
+          <li>Pairs nicely with other planners or notebooks.</li>
+        </ul>
+        <div class="highlight">
+          Think of this not as a strict system, but as a weekly “home base” for your brain —
+          a place where tasks, ideas and priorities can land and rest.
+        </div>
+      </div>
+    </div>
+
+    <div class="inside-grid">
+      <img src="https://m.media-amazon.com/images/I/81ZmMNnTOCL._AC_SL1500_.jpg"
+           alt="ZICOTO Productivity Planner weekly layout with priorities and task lists" />
+      <img src="https://m.media-amazon.com/images/I/713l16du2rL._AC_SL1500_.jpg"
+           alt="ZICOTO Productivity Planner goal and planning pages" />
+      <img src="https://m.media-amazon.com/images/I/81jgxizF67L._AC_SL1500_.jpg"
+           alt="ZICOTO Productivity Planner overview of pages and design" />
+    </div>
+  </section>
+
+  <!-- PROS & CONS -->
+  <section class="section">
+    <h2>Is the ZICOTO Productivity Planner right for you?</h2>
+    <div class="pros-cons">
+      <div class="card">
+        <h3>👍 Strong points</h3>
+        <ul>
+          <li>Very simple, beginner-friendly layout.</li>
+          <li>Ideal for people who get overwhelmed by complex planners.</li>
+          <li>Weekly overview helps you see the big picture without overplanning.</li>
+          <li>Professional and aesthetic look suitable for work and study.</li>
+          <li>Great for students, professionals and busy women with a lot to juggle.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Things to keep in mind</h3>
+        <ul>
+          <li>It’s more minimal than deep goal-planning systems like Legend Planner.</li>
+          <li>If you want heavy habit tracking and detailed daily prompts, you may prefer another planner or use this alongside one.</li>
+          <li>Works best if you enjoy weekly planning more than daily journaling.</li>
+        </ul>
+        <div class="highlight">
+          If you’ve quit planners before because they felt “too much”, ZICOTO is a refreshing,
+          gentle option that gives you structure without pressure.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO USE -->
+  <section class="section">
+    <h2>How to use the ZICOTO Productivity Planner in a gentle way</h2>
+    <p>
+      You don’t need to fill every box to get value from this planner. A simple, weekly ritual is enough.
+    </p>
+    <ul>
+      <li><strong>Once a week:</strong> Write your top 3 priorities and key tasks for each day.</li>
+      <li><strong>Each morning:</strong> Look at the page and choose what actually fits your energy that day.</li>
+      <li><strong>During the week:</strong> Add tasks as they appear, cross off what’s done and move what doesn’t fit.</li>
+      <li><strong>End of the week:</strong> Circle what really mattered and note one small win.</li>
+      <li><strong>Every few weeks:</strong> Use the goal or notes sections to check if your tasks are moving you toward the life you want.</li>
+    </ul>
+    <p class="muted">
+      Planning doesn’t have to be perfect or aesthetic to be powerful.
+      A few honest lines each week can make your days feel more intentional and less chaotic.
+    </p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <h2>ZICOTO Productivity Planner — Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>Is the ZICOTO Productivity Planner dated or undated?</h3>
+      <p>
+        Many versions are undated or lightly structured, so you can start whenever you want
+        and skip weeks without “ruining” the planner. Check the specific model details on Amazon.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is it good for students?</h3>
+      <p>
+        Yes. The weekly structure is great for planning assignments, exams, study blocks and social life
+        without overwhelming pages.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is it more for work or personal life?</h3>
+      <p>
+        You can use it for either — or both. Many people split the page into work and personal columns,
+        or use it mainly for one area of life.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does it ship to the US & Canada?</h3>
+      <p>
+        Yes, it is available on Amazon with fast delivery options in the United States and Canada.
+        See the Amazon page for current shipping details.
+      </p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section">
+    <h2>Ready for calmer, clearer weeks?</h2>
+    <p>
+      If you want a planner that supports your focus without overwhelming you,
+      the ZICOTO Productivity Planner is a beautiful, simple option.
+      It’s a weekly home for your tasks, ideas and small wins.
+    </p>
+    <div class="hero-cta-row">
+      <a class="btn-primary"
+         href="https://amzn.to/4pe3j61"
+         target="_blank" rel="nofollow noopener sponsored">
+        <span class="icon">✨</span>
+        <span>Get ZICOTO Productivity Planner on Amazon</span>
+      </a>
+      <a class="btn-secondary" href="index.html#books">
+        ← Browse more planners
+      </a>
+    </div>
+    <p class="muted" style="margin-top:10px">
+      Affiliate disclosure: Links to Amazon are affiliate links; we may earn a small commission at no extra cost to you.
+    </p>
+
+    <div class="back-home">
+      ← Back to <a href="index.html">Lovely Planners Studio home page</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Lovely Planners Studio — All Rights Reserved
+</footer>
+
+</body>
+</html>
