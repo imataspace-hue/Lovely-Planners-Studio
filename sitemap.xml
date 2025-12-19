@@ -40,24 +40,14 @@
   <url><loc>https://www.lovelyplannersstudio.com/erin-condren-daily-life-planner.html</loc></url>
   <url><loc>https://www.lovelyplannersstudio.com/the-happy-planner.html</loc></url>
 
-  <!-- 🔥 Hobonichi Pages (IMPORTANT) -->
-
-  <!-- Educational / SEO Article -->
+  <!-- Hobonichi Pages (IMPORTANT) -->
   <url>
     <loc>https://www.lovelyplannersstudio.com/what-is-the-hobonichi-techo-planner-used-for-2026.html</loc>
     <priority>0.95</priority>
     <changefreq>monthly</changefreq>
   </url>
 
-  <!-- Sales Page (ONLY when you create the file) -->
-  <!-- IMPORTANT: Do NOT remove this -->
-  <url>
-    <loc>https://www.lovelyplannersstudio.com/hobonichi-techo-planner.html</loc>
-    <priority>0.95</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <!-- Gift Guides 2026 -->
+  <!-- Gift & SEO Articles 2026 -->
   <url><loc>https://www.lovelyplannersstudio.com/christmas-planner-gifts-teens-2026-updated.html</loc></url>
   <url><loc>https://www.lovelyplannersstudio.com/best-planner-gift-ideas-for-girls-2026.html</loc></url>
   <url><loc>https://www.lovelyplannersstudio.com/best-adhd-planners-for-teens-2026.html</loc></url>
@@ -69,10 +59,10 @@
   <url><loc>https://www.lovelyplannersstudio.com/why-cute-journaling-helps-teens-2026.html</loc></url>
   <url><loc>https://www.lovelyplannersstudio.com/complete-planner-gift-guide-2026.html</loc></url>
 
-  <!-- Authority Article -->
+  <!-- Authority SEO -->
   <url>
     <loc>https://www.lovelyplannersstudio.com/best-daily-planners-productivity-mental-clarity-2026.html</loc>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
     <changefreq>monthly</changefreq>
   </url>
 
